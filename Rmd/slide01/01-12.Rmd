@@ -1,58 +1,35 @@
 ---
-title: "Aula 01 - Slide 12: Serie e ACF amostral"
+title: "Aula 01 - Slide 11: Funcao de autocorrelacao (ACF)"
 output: html_document
 ---
 
 ## Objetivo
-Empilhar a serie simulada e a ACF para destacar a autocorrelacao amostral.
+Ilustrar a ACF de uma serie AR(1).
 
 ## Conexao com o PDF
-Slide 12, arquivo de saida `figures/01-12.png` (concatena `01-12a.png` e `01-12b.png`).
+Slide 11, arquivo de saida `figures/01-11.png`.
 
 ```{r setup, message=FALSE, warning=FALSE}
-source("code/utils.R")
-set.seed(12)
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
+set.seed(11)
 ```
 
-```{r gerar-figuras}
-T <- 200
-t <- 1:T
-phi <- 0.6
+```{r gerar-figura}
+T <- 300
+phi <- 0.7
 x <- as.numeric(arima.sim(model = list(ar = phi), n = T))
 
-# (a) Serie
-p_series <- forecast::autoplot(ts(x)) +
-  ggplot2::labs(
-    title = bquote("Serie simulada (AR(1), " ~ phi == .(phi) ~ ")"),
-    x = "t",
-    y = expression(X[t])
-  )
+file <- har_slide_file(1, 11)
+dir.create(dirname(file), showWarnings = FALSE, recursive = TRUE)
 
-har_ggsave_px(
-  file = har_slide_file(1, 12, "a"),
-  plot = p_series,
-  width_px = TSED_WIDTH,
-  height_px = TSED_HEIGHT
-)
-
-# (b) ACF em base R
-file_acf <- har_slide_file(1, 12, "b")
-png(file_acf, width = TSED_WIDTH, height = TSED_HEIGHT, res = 150)
+png(file, width = TSED_WIDTH, height = 640, res = 150)
 acf(
   x,
   lag.max = 40,
-  main = "ACF amostral (com bandas de confianca)",
+  main = "ACF",
   xlab = "defasagem (h)",
   ylab = "autocorrelacao"
 )
 grid()
 dev.off()
-
-har_concat_png(
-  out_file = har_slide_file(1, 12),
-  files = c(
-    har_slide_file(1, 12, "a"),
-    har_slide_file(1, 12, "b")
-  )
-)
 ```

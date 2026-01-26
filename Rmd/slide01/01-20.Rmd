@@ -10,7 +10,7 @@ Exibir uma serie AR(1) e a ACF com decaimento aproximado geometrico.
 Slide 20, arquivo de saida `figures/01-20.png` (concatena `01-20a.png` e `01-20b.png`).
 
 ```{r setup, message=FALSE, warning=FALSE}
-source("code/utils.R")
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 set.seed(20)
 ```
 

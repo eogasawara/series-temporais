@@ -1,65 +1,50 @@
 ---
-title: "Aula 01 - Slide 04: Dependencia temporal entre observacoes"
+title: "Aula 01 - Slide 03: Dependencia temporal e permutacao"
 output: html_document
 ---
 
 ## Objetivo
-Contrastar ruido branco (sem dependencia) com um AR(1) (com dependencia).
+Comparar uma serie temporal original com uma versao permutada para ilustrar a perda de dependencia temporal.
 
 ## Conexao com o PDF
-Slide 04, arquivo de saida `figures/01-04.png` (concatena `01-04a.png` e `01-04b.png`).
+Slide 03, arquivo de saida `figures/01-03.png` (concatena `01-03a.png` e `01-03b.png`).
 
 ```{r setup, message=FALSE, warning=FALSE}
-source("code/utils.R")
-set.seed(3)
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
+set.seed(2)
 ```
 
 ```{r gerar-figuras}
-T <- 200
+T <- 150
 t <- 1:T
+x <- sin(2 * pi * t / 30) + 0.01 * t + rnorm(T, sd = 0.5)
 
-# Serie 1: ruido branco (sem dependencia temporal)
-x_wn <- rnorm(T, mean = 0, sd = 1)
-x_wn_ts <- ts(x_wn, start = 1, frequency = 1)
+# Permutacao aleatoria dos indices (remove a ordem temporal)
+perm <- sample(T)
+x_perm <- x[perm]
 
-p1 <- forecast::autoplot(x_wn_ts) +
-  ggplot2::labs(
-    title = "Ruido branco",
-    x = "t",
-    y = expression(X[t])
-  )
+obj <- harbinger::harbinger()
 
-# Serie 2: AR(1) (com dependencia temporal)
-phi <- 0.8
-x_ar1 <- as.numeric(arima.sim(model = list(ar = phi), n = T))
-x_ar1_ts <- ts(x_ar1, start = 1, frequency = 1)
-
-p2 <- forecast::autoplot(x_ar1_ts) +
-  ggplot2::labs(
-    title = bquote("AR(1): " ~ phi == .(phi)),
-    x = "t",
-    y = expression(X[t])
-  )
-
-har_ggsave_px(
-  file = har_slide_file(1, 4, "a"),
-  plot = p1,
-  width_px = TSED_WIDTH,
-  height_px = TSED_HEIGHT
+har_save_plot(
+  file = "figures/01-03a.png",
+  obj = obj,
+  serie = x,
+  idx = t,
+  mark.cp = FALSE,
+  width = TSED_WIDTH,
+  height = TSED_HEIGHT
 )
 
-har_ggsave_px(
-  file = har_slide_file(1, 4, "b"),
-  plot = p2,
-  width_px = TSED_WIDTH,
-  height_px = TSED_HEIGHT
+har_save_plot(
+  file = "figures/01-03b.png",
+  obj = obj,
+  serie = x_perm,
+  idx = t,
+  mark.cp = FALSE,
+  width = TSED_WIDTH,
+  height = TSED_HEIGHT
 )
 
-har_concat_png(
-  out_file = har_slide_file(1, 4),
-  files = c(
-    har_slide_file(1, 4, "a"),
-    har_slide_file(1, 4, "b")
-  )
-)
+# Junta as duas figuras no arquivo final do slide
+har_concat_png("figures/01-03.png", c("figures/01-03a.png", "figures/01-03b.png"))
 ```

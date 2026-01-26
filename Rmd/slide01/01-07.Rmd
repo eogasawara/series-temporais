@@ -1,66 +1,59 @@
 ---
-title: "Aula 01 - Slide 07: Media do processo temporal"
+title: "Aula 01 - Slide 06: Processo estocastico e trajetorias"
 output: html_document
 ---
 
 ## Objetivo
-Comparar uma serie com media constante e outra com mudanca de nivel.
+Mostrar varias trajetorias de um AR(1) e destacar uma realizacao observada.
 
 ## Conexao com o PDF
-Slide 07, arquivo de saida `figures/01-07.png` (concatena `01-07a.png` e `01-07b.png`).
+Slide 06, arquivo de saida `figures/01-06.png`.
 
 ```{r setup, message=FALSE, warning=FALSE}
-source("code/utils.R")
-set.seed(7)
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
+set.seed(4)
 ```
 
-```{r gerar-figuras}
-T <- 200
+```{r gerar-figura}
+T <- 120
 t <- 1:T
+n_paths <- 20
+phi <- 0.6
 
-# Serie 1: media constante
-x_const <- rnorm(T, mean = 0, sd = 1)
-x_const_ts <- ts(x_const, start = 1, frequency = 1)
+# Simula varias trajetorias de um AR(1)
+paths <- replicate(n_paths, as.numeric(arima.sim(model = list(ar = phi), n = T)))
 
-p1 <- forecast::autoplot(x_const_ts) +
+# Realizacao observada (primeira trajetoria)
+x_obs <- paths[, 1]
+x_obs_ts <- ts(x_obs, start = 1, frequency = 1)
+
+# Data frame com as demais trajetorias
+df_other <- data.frame(
+  time = rep(t, times = n_paths - 1),
+  value = as.vector(paths[, 2:n_paths]),
+  path = factor(rep(2:n_paths, each = T))
+)
+
+p <- forecast::autoplot(x_obs_ts) +
+  ggplot2::geom_line(
+    data = df_other,
+    ggplot2::aes(x = time, y = value, group = path),
+    linewidth = 0.4,
+    alpha = 0.35
+  ) +
+  ggplot2::geom_line(
+    data = data.frame(time = t, value = x_obs),
+    ggplot2::aes(x = time, y = value),
+    linewidth = 1.2
+  ) +
   ggplot2::labs(
-    title = "Media constante",
-    x = "t",
-    y = expression(X[t])
-  )
-
-# Serie 2: media variavel (mudanca de nivel/regime)
-mu <- ifelse(t <= T / 2, -1.0, 1.5)
-x_var <- rnorm(T, mean = mu, sd = 1)
-x_var_ts <- ts(x_var, start = 1, frequency = 1)
-
-p2 <- forecast::autoplot(x_var_ts) +
-  ggplot2::geom_vline(xintercept = T / 2, linetype = "dashed", alpha = 0.6) +
-  ggplot2::labs(
-    title = "Media variavel",
+    title = "Processo estocastico e trajetoria",
     x = "t",
     y = expression(X[t])
   )
 
 har_ggsave_px(
-  file = har_slide_file(1, 7, "a"),
-  plot = p1,
-  width_px = TSED_WIDTH,
-  height_px = TSED_HEIGHT
-)
-
-har_ggsave_px(
-  file = har_slide_file(1, 7, "b"),
-  plot = p2,
-  width_px = TSED_WIDTH,
-  height_px = TSED_HEIGHT
-)
-
-har_concat_png(
-  out_file = har_slide_file(1, 7),
-  files = c(
-    har_slide_file(1, 7, "a"),
-    har_slide_file(1, 7, "b")
-  )
+  file = har_slide_file(1, 6),
+  plot = p
 )
 ```
