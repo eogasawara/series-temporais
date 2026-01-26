@@ -67,14 +67,14 @@ har_slide_file <- function(n_aula, n_slide, suffix = NULL) {
     slide <- sprintf("%02d", n_slide)
   else 
     slide <- n_slide  
-  
-  
+
+
   if (!is.null(suffix)) {
     file <- sprintf("figures/%s-%s%s.png", aula, slide, suffix)
   } else {
     file <- sprintf("figures/%s-%s.png", aula, slide)
   }
-  
+
   return(file)
 }
 
