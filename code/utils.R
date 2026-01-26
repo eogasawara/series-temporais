@@ -4,23 +4,23 @@ library(daltoolbox)
 library(harbinger)
 library(forecast)
 
+# Standard slide dimensions (pixels) and DPI for PNG output.
 TSED_WIDTH <- 640
 TSED_HEIGHT <- 480
-TSED_DPI    <- 150
+TSED_DPI <- 150
 
+# Project-wide header helpers used by the slides.
 source("https://raw.githubusercontent.com/eogasawara/TSED/refs/heads/main/code/header.R")
 
-# ============================================================
-# Função utilitária para salvar figuras no padrão Harbinger
-# ============================================================
+# Save a Harbinger plot with a consistent PNG style and size.
 har_save_plot <- function(file, obj, serie, idx = NULL,
                           detection = NULL, event = NULL,
-                          mark.cp = TRUE, ylim = NULL, yline = NULL, width = 1200, height = 700) {
-  
-  # Cria diretório se não existir
+                          mark.cp = TRUE, ylim = NULL, yline = NULL,
+                          width = 1200, height = 700) {
+  # Ensure output directory exists.
   dir.create(dirname(file), showWarnings = FALSE, recursive = TRUE)
-  
-  # Gera o objeto gráfico do Harbinger
+
+  # Build the Harbinger plot object.
   grf <- harbinger::har_plot(
     obj = obj,
     serie = serie,
@@ -31,64 +31,54 @@ har_save_plot <- function(file, obj, serie, idx = NULL,
     ylim = ylim,
     yline = yline
   )
-  
-  # Salva em PNG
+
+  # Persist PNG on disk.
   png(filename = file, width = width, height = height, res = 150)
   plot(grf)
   dev.off()
-  
+
   invisible(file)
 }
 
-# ============================================================
-# Função: concatena imagens PNG verticalmente (Harbinger/TSED)
-# ============================================================
+# Concatenate multiple PNGs vertically into a single output file.
 har_concat_png <- function(out_file, files) {
-  # dependência
   if (!requireNamespace("magick", quietly = TRUE)) {
-    stop("Pacote 'magick' não está instalado. Execute: install.packages('magick')")
+    stop("Pacote 'magick' nao esta instalado. Execute: install.packages('magick')")
   }
-  
-  # validação básica
-  if (length(files) < 2) {
-    stop("É necessário informar pelo menos dois arquivos para concatenar.")
-  }
-  
-  # lê imagens
-  imgs <- magick::image_read(files)
-  
-  # empilha verticalmente
-  img_final <- magick::image_append(imgs, stack = TRUE)
-  
 
-  # salva imagem final
+  if (length(files) < 2) {
+    stop("E necessario informar pelo menos dois arquivos para concatenar.")
+  }
+
+  imgs <- magick::image_read(files)
+  img_final <- magick::image_append(imgs, stack = TRUE)
   magick::image_write(img_final, path = out_file)
-  
+
   invisible(out_file)
 }
 
-
+# Helper to build standard slide file names.
 har_slide_file <- function(n_aula, n_slide, suffix = NULL) {
-  
-  aula  <- sprintf("%02d", n_aula)
+  aula <- sprintf("%02d", n_aula)
   slide <- sprintf("%02d", n_slide)
-  
+
   if (!is.null(suffix)) {
-    file <- sprintf("slides/%s-%s%s.png", aula, slide, suffix)
+    file <- sprintf("figures/%s-%s%s.png", aula, slide, suffix)
   } else {
-    file <- sprintf("slides/%s-%s.png", aula, slide)
+    file <- sprintf("figures/%s-%s.png", aula, slide)
   }
-  
+
   return(file)
 }
 
+# Save a ggplot object using pixel-based sizing.
 har_ggsave_px <- function(file, plot, width_px = TSED_WIDTH, height_px = TSED_HEIGHT, dpi = TSED_DPI) {
   dir.create(dirname(file), showWarnings = FALSE, recursive = TRUE)
-  
+
   ggsave(
     filename = file,
     plot = plot,
-    width  = width_px  / dpi,
+    width = width_px / dpi,
     height = height_px / dpi,
     dpi = dpi
   )

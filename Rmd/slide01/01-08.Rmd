@@ -1,17 +1,24 @@
-# ============================================================
-# Aula 01 — Slide 08
-# Variância do Processo Temporal
-# Saída final: slides/01-08.png (concatenação vertical)
-# ============================================================
+---
+title: "Aula 01 - Slide 08: Variancia do processo temporal"
+output: html_document
+---
 
-source("slides/utils.R")
+## Objetivo
+Comparar uma serie homocedastica com outra heterocedastica.
 
+## Conexao com o PDF
+Slide 08, arquivo de saida `figures/01-08.png` (concatena `01-08a.png` e `01-08b.png`).
+
+```{r setup, message=FALSE, warning=FALSE}
+source("code/utils.R")
 set.seed(8)
+```
 
+```{r gerar-figuras}
 T <- 200
 t <- 1:T
 
-# --- Série 1: variância constante (homocedástica) ---
+# Serie 1: variancia constante (homocedastica)
 x_homo <- rnorm(T, mean = 0, sd = 1)
 x_homo_ts <- ts(x_homo, start = 1, frequency = 1)
 
@@ -22,9 +29,8 @@ p1 <- forecast::autoplot(x_homo_ts) +
     y = expression(X[t])
   )
 
-# --- Série 2: variância variável (heterocedástica) ---
-# Exemplo simples: desvio-padrão cresce ao longo do tempo (σ_t aumenta com t)
-sigma_t <- 0.4 + 1.6 * (t - 1) / (T - 1)  # vai de 0.4 até 2.0
+# Serie 2: variancia variavel (heterocedastica)
+sigma_t <- 0.4 + 1.6 * (t - 1) / (T - 1)
 x_hetero <- rnorm(T, mean = 0, sd = sigma_t)
 x_hetero_ts <- ts(x_hetero, start = 1, frequency = 1)
 
@@ -35,22 +41,20 @@ p2 <- forecast::autoplot(x_hetero_ts) +
     y = expression(X[t])
   )
 
-# Salva subfiguras (metade da altura cada)
 har_ggsave_px(
   file = har_slide_file(1, 8, "a"),
   plot = p1,
-  width_px  = TSED_WIDTH,
-  height_px = TSED_HEIGHT 
+  width_px = TSED_WIDTH,
+  height_px = TSED_HEIGHT
 )
 
 har_ggsave_px(
   file = har_slide_file(1, 8, "b"),
   plot = p2,
-  width_px  = TSED_WIDTH,
-  height_px = TSED_HEIGHT 
+  width_px = TSED_WIDTH,
+  height_px = TSED_HEIGHT
 )
 
-# Concatena verticalmente no arquivo final do slide
 har_concat_png(
   out_file = har_slide_file(1, 8),
   files = c(
@@ -58,3 +62,4 @@ har_concat_png(
     har_slide_file(1, 8, "b")
   )
 )
+```

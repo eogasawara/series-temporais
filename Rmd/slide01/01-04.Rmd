@@ -1,28 +1,35 @@
-# ============================================================
-# Aula 01 — Slide 04
-# Dependência Temporal entre Observações
-# Saída final: slides/01-04.png (concatenação vertical)
-# ============================================================
+---
+title: "Aula 01 - Slide 04: Dependencia temporal entre observacoes"
+output: html_document
+---
 
-source("slides/utils.R")
+## Objetivo
+Contrastar ruido branco (sem dependencia) com um AR(1) (com dependencia).
 
+## Conexao com o PDF
+Slide 04, arquivo de saida `figures/01-04.png` (concatena `01-04a.png` e `01-04b.png`).
+
+```{r setup, message=FALSE, warning=FALSE}
+source("code/utils.R")
 set.seed(3)
+```
 
+```{r gerar-figuras}
 T <- 200
 t <- 1:T
 
-# --- Série 1: ruído branco (sem dependência temporal) ---
+# Serie 1: ruido branco (sem dependencia temporal)
 x_wn <- rnorm(T, mean = 0, sd = 1)
 x_wn_ts <- ts(x_wn, start = 1, frequency = 1)
 
 p1 <- forecast::autoplot(x_wn_ts) +
   ggplot2::labs(
-    title = "Ruído branco",
+    title = "Ruido branco",
     x = "t",
     y = expression(X[t])
   )
 
-# --- Série 2: AR(1) (com dependência temporal) ---
+# Serie 2: AR(1) (com dependencia temporal)
 phi <- 0.8
 x_ar1 <- as.numeric(arima.sim(model = list(ar = phi), n = T))
 x_ar1_ts <- ts(x_ar1, start = 1, frequency = 1)
@@ -34,22 +41,20 @@ p2 <- forecast::autoplot(x_ar1_ts) +
     y = expression(X[t])
   )
 
-# Salva subfiguras (metade da altura cada)
 har_ggsave_px(
   file = har_slide_file(1, 4, "a"),
   plot = p1,
-  width_px  = TSED_WIDTH,
+  width_px = TSED_WIDTH,
   height_px = TSED_HEIGHT
 )
 
 har_ggsave_px(
   file = har_slide_file(1, 4, "b"),
   plot = p2,
-  width_px  = TSED_WIDTH,
+  width_px = TSED_WIDTH,
   height_px = TSED_HEIGHT
 )
 
-# Concatena verticalmente no arquivo final do slide
 har_concat_png(
   out_file = har_slide_file(1, 4),
   files = c(
@@ -57,3 +62,4 @@ har_concat_png(
     har_slide_file(1, 4, "b")
   )
 )
+```
