@@ -1,0 +1,26 @@
+source("slides/utils.R")
+
+set.seed(3)
+n <- 250
+
+# AR(1) estacionário: phi = 0.7
+x_stat <- stats::arima.sim(model = list(ar = 0.7), n = n)
+x_stat <- ts(x_stat)
+
+# Raiz unitária: passeio aleatório X_t = X_{t-1} + eps_t
+eps <- rnorm(n)
+x_rw <- cumsum(eps)
+x_rw <- ts(x_rw)
+
+p1 <- forecast::autoplot(x_stat) +
+  ggplot2::labs(title = "AR(1) estacionário (|ϕ|<1)", x = "Tempo", y = "Xt")
+p2 <- forecast::autoplot(x_rw) +
+  ggplot2::labs(title = "Passeio aleatório (raiz unitária, ϕ=1)", x = "Tempo", y = "Xt")
+
+f_a <- har_slide_file(3, 6, "a")
+f_b <- har_slide_file(3, 6, "b")
+har_ggsave_px(f_a, p1, width_px = TSED_WIDTH, height_px = TSED_HEIGHT, dpi = TSED_DPI)
+har_ggsave_px(f_b, p2, width_px = TSED_WIDTH, height_px = TSED_HEIGHT, dpi = TSED_DPI)
+
+f_out <- har_slide_file(3, 6)
+har_concat_png(f_out, c(f_a, f_b))
