@@ -1,0 +1,52 @@
+# Aula 06 — Slide 18
+# Gerar figuras (PNG) para o slide e criar uma versão .Rmd documentada.
+
+source("slides/utils.R")
+
+# Pacotes (apenas quando necessário)
+if (!requireNamespace("forecast", quietly = TRUE)) install.packages("forecast")
+if (!requireNamespace("ggplot2", quietly = TRUE)) install.packages("ggplot2")
+
+library(forecast)
+library(ggplot2)
+
+set.seed(6)
+
+# Série com um evento local para motivar janelas
+n <- 300
+x <- arima.sim(model=list(ar=0.7), n=n, sd=0.7)
+x <- as.numeric(x)
+x[160:170] <- x[160:170] + seq(0, 3, length.out = 11)
+x_ts <- ts(x)
+
+df <- data.frame(t=1:n, x=x)
+
+# Janela curta vs longa
+w_short <- 25
+w_long <- 120
+t0 <- 150
+
+pa <- ggplot(df, aes(x=t, y=x)) +
+  geom_line() +
+  geom_rect(aes(xmin=t0, xmax=t0+w_short, ymin=-Inf, ymax=Inf),
+            inherit.aes = FALSE, alpha = 0.2) +
+  ggtitle("Janelas deslizantes: curta") +
+  ylab("X_t")
+
+pb <- ggplot(df, aes(x=t, y=x)) +
+  geom_line() +
+  geom_rect(aes(xmin=t0, xmax=t0+w_long, ymin=-Inf, ymax=Inf),
+            inherit.aes = FALSE, alpha = 0.2) +
+  ggtitle("Janelas deslizantes: longa") +
+  ylab("X_t")
+
+out_a <- har_slide_file("06", "18", "a")
+out_b <- har_slide_file("06", "18", "b")
+out_main <- har_slide_file("06", "18")
+
+har_ggsave_px(out_a, pa, height_px = TSED_HEIGHT)
+har_ggsave_px(out_b, pb, height_px = TSED_HEIGHT)
+har_concat_png(out_main, c(out_a, out_b))
+
+message("PNGs gerados em: ", out_a, " | ", out_b, " | ", out_main)
+
