@@ -90,3 +90,4 @@ har_ggsave_px <- function(file, plot, width_px = TSED_WIDTH, height_px = TSED_HE
     dpi = dpi
   )
 }
+
