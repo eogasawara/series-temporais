@@ -1,0 +1,85 @@
+---
+title: "Aula 04 - Slide 07"
+output: html_document
+---
+
+## Objetivo
+Reproduzir a figura/resultado do slide 07 da Aula 04.
+
+## Descricao
+Este documento explica o passo a passo do codigo para gerar a figura/resultado associado ao slide.
+
+## Conexao com o PDF
+Slide 07 do PDF correspondente da Aula 04.
+
+## Referencia
+Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (3rd ed.). OTexts.
+
+```{r codigo, message=FALSE, warning=FALSE}
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+source("slides/utils.R")
+
+# Slide 04-07 — Previsão multi-passos é recursiva (usa previsões anteriores)
+# Figura: mostrar 3 horizontes (h=1, h=6, h=18) para o mesmo AR(1),
+# destacando como os intervalos abrem conforme h cresce.
+
+set.seed(2026)
+
+suppressPackageStartupMessages({
+  library(forecast)
+  library(ggplot2)
+})
+
+n_aula  <- 4
+n_slide <- 7
+
+n   <- 160
+phi <- 0.8
+x <- ts(arima.sim(model = list(ar = phi), n = n, sd = 1))
+
+fit <- Arima(x, order = c(1,0,0), include.mean = FALSE)
+
+# Gera previsões com diferentes horizontes
+h_list <- c(1, 6, 18)
+fcs <- lapply(h_list, function(h) forecast(fit, h = h))
+
+# Monta data.frame com mediana e intervalos (80%) para comparar
+make_df <- function(fc, h){
+  data.frame(
+    t = as.numeric(time(fc$mean)),
+    mean = as.numeric(fc$mean),
+    lo = as.numeric(fc$lower[,"80%"]),
+    hi = as.numeric(fc$upper[,"80%"]),
+    h = factor(paste0("h=", h), levels = paste0("h=", h_list))
+  )
+}
+df <- do.call(rbind, Map(make_df, fcs, h_list))
+
+fa <- har_slide_file(n_aula, n_slide, "a")
+fb <- har_slide_file(n_aula, n_slide, "b")
+fo <- har_slide_file(n_aula, n_slide)
+
+# (a) Série observada (última janela) para contexto
+win <- 80
+x_tail <- window(x, start = length(x)-win+1)
+pa <- autoplot(x_tail) +
+  ggtitle("Contexto: últimos pontos observados") +
+  xlab("Tempo") + ylab("X_t")
+
+har_ggsave_px(fa, pa, width_px = TSED_WIDTH, height_px = TSED_HEIGHT, dpi = TSED_DPI)
+
+# (b) Comparação de horizontes (recursividade -> mais incerteza com h)
+pb <- ggplot(df, aes(x = t, y = mean)) +
+  geom_ribbon(aes(ymin = lo, ymax = hi), alpha = 0.25) +
+  geom_line() +
+  facet_wrap(~h, ncol = 1, scales = "free_x") +
+  ggtitle("Multi-passos: previsões recursivas") +
+  xlab("Tempo") + ylab("Previsão")
+
+har_ggsave_px(fb, pb, width_px = TSED_WIDTH, height_px = TSED_HEIGHT, dpi = TSED_DPI)
+
+har_concat_png(fo, c(fa, fb))
+```

@@ -1,0 +1,62 @@
+---
+title: "Aula 02 - Slide 02: Decomposicao multiplicativa e log"
+output: html_document
+---
+
+## Objetivo
+Gerar uma figura que mostre uma serie com estrutura multiplicativa e a mesma serie apos transformacao log.
+
+## Conexao com o PDF
+Slide 02 do PDF `02-Estrutura-Temporal-em-Series-Temporais.pdf`, arquivos de saida `slides/02-02a.png`, `slides/02-02b.png` e `slides/02-02.png`.
+
+## Descricao do codigo
+Simula tendencia e sazonalidade multiplicativas com ruido log-normal, plota a serie original e a serie em log, e depois concatena as imagens.
+
+```{r setup, message=FALSE, warning=FALSE}
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
+set.seed(202)
+```
+
+```{r gerar-figura}
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+# Serie multiplicativa: nivel cresce e a variancia cresce junto
+n  <- 120
+t  <- 1:n
+s  <- 12
+
+trend  <- 50 + 0.4 * t
+season <- 1 + 0.25 * sin(2 * pi * t / s)
+noise  <- exp(rnorm(n, mean = 0, sd = 0.10))
+
+x <- trend * season * noise
+x_ts <- ts(x, frequency = s)
+
+# (a) Serie original com variancia crescente
+p_a <- forecast::autoplot(x_ts) +
+  ggplot2::labs(x = NULL, y = NULL, title = "Serie com estrutura multiplicativa")
+
+fa <- har_slide_file(2, 2, "a")
+har_ggsave_px(fa, p_a, height_px = TSED_HEIGHT / 2)
+
+# (b) Log estabiliza a variancia e aproxima estrutura aditiva
+xlog_ts <- ts(log(x), frequency = s)
+p_b <- forecast::autoplot(xlog_ts) +
+  ggplot2::labs(x = NULL, y = NULL, title = "Apos log: variancia mais estavel")
+
+fb <- har_slide_file(2, 2, "b")
+har_ggsave_px(fb, p_b, height_px = TSED_HEIGHT / 2)
+
+# Composicao final do slide
+out <- har_slide_file(2, 2)
+har_concat_png(out, c(fa, fb))
+```
+
+## Referencia
+Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (3rd ed.). OTexts.

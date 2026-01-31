@@ -1,0 +1,55 @@
+---
+title: "Aula 03 - Slide 20"
+output: html_document
+---
+
+## Objetivo
+Reproduzir a figura/resultado do slide 20 da Aula 03.
+
+## Descricao
+Este documento explica o passo a passo do codigo para gerar a figura/resultado associado ao slide.
+
+## Conexao com o PDF
+Slide 20 do PDF correspondente da Aula 03.
+
+## Referencia
+Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (3rd ed.). OTexts.
+
+```{r codigo, message=FALSE, warning=FALSE}
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+source("slides/utils.R")
+
+set.seed(3)
+n <- 300
+
+# Série integrada I(1): random walk + pequeno drift
+drift <- 0.03
+x <- ts(cumsum(drift + rnorm(n)))
+
+# Ajuste ARIMA automático (didático) e resíduos
+fit <- forecast::auto.arima(x)
+res <- residuals(fit)
+
+p1 <- forecast::autoplot(x) +
+  ggplot2::labs(
+    title = "Série não estacionária",
+    x = "Tempo", y = "Xt"
+  )
+
+p2 <- forecast::autoplot(ts(res)) +
+  ggplot2::labs(
+    title = "Resíduos do ARIMA (ideal: ~ ruído branco)",
+    x = "Tempo", y = "Resíduo"
+  )
+
+f_a <- har_slide_file(3, 20, "a")
+f_b <- har_slide_file(3, 20, "b")
+har_ggsave_px(f_a, p1, width_px = TSED_WIDTH, height_px = TSED_HEIGHT, dpi = TSED_DPI)
+har_ggsave_px(f_b, p2, width_px = TSED_WIDTH, height_px = TSED_HEIGHT, dpi = TSED_DPI)
+
+f_out <- har_slide_file(3, 20)
+har_concat_png(f_out, c(f_a, f_b))
+```

@@ -1,0 +1,79 @@
+---
+title: "Aula 04 - Slide 05"
+output: html_document
+---
+
+## Objetivo
+Reproduzir a figura/resultado do slide 05 da Aula 04.
+
+## Descricao
+Este documento explica o passo a passo do codigo para gerar a figura/resultado associado ao slide.
+
+## Conexao com o PDF
+Slide 05 do PDF correspondente da Aula 04.
+
+## Referencia
+Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (3rd ed.). OTexts.
+
+```{r codigo, message=FALSE, warning=FALSE}
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+source("slides/utils.R")
+
+# Slide 04-05 — Previsão em AR(1): 1 passo vs h passos
+# (a) Série AR(1) e previsões 1-passo (fitted): \hat X_{t+1|t} = phi X_t
+# (b) Previsão h passos com intervalos: incerteza cresce com o horizonte
+
+set.seed(2026)
+
+suppressPackageStartupMessages({
+  library(forecast)
+  library(ggplot2)
+})
+
+n_aula  <- 4
+n_slide <- 5
+
+n   <- 180
+phi <- 0.7
+sig <- 1.0
+x <- ts(arima.sim(model = list(ar = phi), n = n, sd = sig))
+
+fit <- Arima(x, order = c(1, 0, 0), include.mean = FALSE)
+
+fa <- har_slide_file(n_aula, n_slide, "a")
+fb <- har_slide_file(n_aula, n_slide, "b")
+fo <- har_slide_file(n_aula, n_slide)
+
+# (a) Série + fitted (1-passo dentro da amostra)
+fitted_1 <- fitted(fit)
+df_a <- data.frame(
+  t = as.numeric(time(x)),
+  x = as.numeric(x),
+  fitted = c(rep(NA, length(x) - length(fitted_1)), as.numeric(fitted_1))
+)
+
+pa <- ggplot(df_a, aes(x = t)) +
+  geom_line(aes(y = x)) +
+  geom_line(aes(y = fitted), linetype = 2, na.rm = TRUE) +
+  ggtitle("AR(1): observado e previsão 1 passo (fitted)") +
+  xlab("Tempo") + ylab("Valor") +
+  labs(caption = "Tracejado: \\hat{X}_{t|t-1} (1 passo).")
+
+har_ggsave_px(fa, pa, width_px = TSED_WIDTH, height_px = TSED_HEIGHT, dpi = TSED_DPI)
+
+# (b) Previsão multi-passos (fora da amostra)
+h <- 24
+fc <- forecast(fit, h = h)
+
+pb <- autoplot(fc) +
+  ggtitle("AR(1): previsão multi-passos (intervalos)") +
+  xlab("Tempo") + ylab("Valor") +
+  labs(caption = "Intervalos aumentam com h: mais incerteza no longo prazo.")
+
+har_ggsave_px(fb, pb, width_px = TSED_WIDTH, height_px = TSED_HEIGHT, dpi = TSED_DPI)
+
+har_concat_png(fo, c(fa, fb))
+```

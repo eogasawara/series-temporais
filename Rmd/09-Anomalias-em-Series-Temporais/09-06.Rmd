@@ -1,0 +1,83 @@
+---
+title: "Aula 09 - Slide 06"
+output: html_document
+---
+
+## Objetivo
+Reproduzir a figura/resultado do slide 06 da Aula 09.
+
+## Descricao
+Este documento explica o passo a passo do codigo para gerar a figura/resultado associado ao slide.
+
+## Conexao com o PDF
+Slide 06 do PDF correspondente da Aula 09.
+
+## Referencia
+Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (3rd ed.). OTexts.
+
+```{r codigo, message=FALSE, warning=FALSE}
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+source("slides/utils.R")
+
+# Aula 09 — Slide 06: Anomalias vs Mudanças Estruturais
+# (a) Anomalia: desvio local (pontual) detectado via Harbinger (hanr_arima)
+# (b) Mudança estrutural: troca persistente de regime detectada via Harbinger (hcp_binseg)
+# Referência no PDF: Slide 06 ("Anomalias vs Mudanças Estruturais")
+
+suppressPackageStartupMessages({
+  library(harbinger)
+})
+
+set.seed(906)
+
+# (a) Série com anomalia pontual
+n <- 240
+xa <- as.numeric(arima.sim(model=list(ar=0.7), n=n))
+idx_a <- 120
+xa[idx_a] <- xa[idx_a] + 8
+serie_a <- ts(xa)
+
+model_a <- hanr_arima()
+model_a <- fit(model_a, serie_a)
+det_a <- detect(model_a, serie_a)
+
+file_a <- har_slide_file(9, 6, "a")
+har_save_plot(
+  file      = file_a,
+  obj       = model_a,
+  serie     = serie_a,
+  idx       = det_a$idx,
+  detection = det_a,
+  event     = det_a$event,
+  mark.cp   = FALSE
+)
+
+# (b) Série com mudança de regime persistente (mudança de nível)
+n1 <- 120
+n2 <- 120
+xb <- c(
+  as.numeric(arima.sim(model=list(ar=0.6), n=n1)) + 0,
+  as.numeric(arima.sim(model=list(ar=0.6), n=n2)) + 4
+)
+serie_b <- ts(xb)
+
+model_b <- hcp_binseg(Q = 1)  # 1 ponto de mudança (didático)
+model_b <- fit(model_b, serie_b)
+det_b <- detect(model_b, serie_b)
+
+file_b <- har_slide_file(9, 6, "b")
+har_save_plot(
+  file      = file_b,
+  obj       = model_b,
+  serie     = serie_b,
+  idx       = det_b$idx,
+  detection = det_b,
+  event     = det_b$event,
+  mark.cp   = TRUE
+)
+
+har_concat_png(har_slide_file(9, 6), c(file_a, file_b))
+```

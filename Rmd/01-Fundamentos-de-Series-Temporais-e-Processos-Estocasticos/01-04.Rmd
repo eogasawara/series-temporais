@@ -1,0 +1,64 @@
+---
+title: "Aula 01 - Slide 03: Dependencia temporal e permutacao"
+output: html_document
+---
+
+## Objetivo
+Comparar uma serie temporal original com uma versao permutada para ilustrar a perda de dependencia temporal.
+
+## Descricao
+Este documento explica o passo a passo do codigo para gerar a figura/resultado associado ao slide.
+
+## Conexao com o PDF
+Slide 03, arquivo de saida `figures/01-03.png` (concatena `01-03a.png` e `01-03b.png`).
+
+```{r setup, message=FALSE, warning=FALSE}
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
+set.seed(2)
+```
+
+```{r gerar-figuras}
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+T <- 150
+t <- 1:T
+x <- sin(2 * pi * t / 30) + 0.01 * t + rnorm(T, sd = 0.5)
+
+# Permutacao aleatoria dos indices (remove a ordem temporal)
+perm <- sample(T)
+x_perm <- x[perm]
+
+obj <- harbinger::harbinger()
+
+har_save_plot(
+  file = "figures/01-03a.png",
+  obj = obj,
+  serie = x,
+  idx = t,
+  mark.cp = FALSE,
+  width = TSED_WIDTH,
+  height = TSED_HEIGHT
+)
+
+har_save_plot(
+  file = "figures/01-03b.png",
+  obj = obj,
+  serie = x_perm,
+  idx = t,
+  mark.cp = FALSE,
+  width = TSED_WIDTH,
+  height = TSED_HEIGHT
+)
+
+# Junta as duas figuras no arquivo final do slide
+har_concat_png("figures/01-03.png", c("figures/01-03a.png", "figures/01-03b.png"))
+```
+
+## Referencia
+Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (3rd ed.). OTexts.

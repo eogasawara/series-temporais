@@ -1,0 +1,55 @@
+---
+title: "Aula 02 - Slide 10: Deterministica vs estocastica"
+output: html_document
+---
+
+## Objetivo
+Comparar uma serie deterministica (f(t) + ruido) com um passeio aleatorio estocastico.
+
+## Conexao com o PDF
+Slide 10 do PDF `02-Estrutura-Temporal-em-Series-Temporais.pdf`, arquivos de saida `slides/02-10a.png`, `slides/02-10b.png` e `slides/02-10.png`.
+
+## Descricao do codigo
+Gera duas series contrastantes, salva os dois paines e concatena as imagens para o slide.
+
+```{r setup, message=FALSE, warning=FALSE}
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
+set.seed(210)
+```
+
+```{r gerar-figura}
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+n <- 160
+t <- 1:n
+
+# (a) Serie deterministica
+x_det <- 5 + 0.08 * t + rnorm(n, 0, 1)
+p_a <- forecast::autoplot(ts(x_det)) +
+  ggplot2::labs(x = NULL, y = NULL, title = "Deterministica: X_t = f(t) + e_t")
+
+fa <- har_slide_file("02", "10", "a")
+har_ggsave_px(fa, p_a, height_px = TSED_HEIGHT / 2)
+
+# (b) Serie estocastica (random walk)
+u <- rnorm(n, 0, 1)
+x_rw <- cumsum(u)
+p_b <- forecast::autoplot(ts(x_rw)) +
+  ggplot2::labs(x = NULL, y = NULL, title = "Estocastica: X_t = X_{t-1} + u_t")
+
+fb <- har_slide_file("02", "10", "b")
+har_ggsave_px(fb, p_b, height_px = TSED_HEIGHT / 2)
+
+# Composicao final do slide
+out <- har_slide_file("02", "10")
+har_concat_png(out, c(fa, fb))
+```
+
+## Referencia
+Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (3rd ed.). OTexts.
