@@ -1,0 +1,55 @@
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+# Aula 06 — Slide 05
+# Gerar figuras (PNG) para o slide e criar uma versão .Rmd documentada.
+
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
+
+# Pacotes (apenas quando necessário)
+if (!requireNamespace("forecast", quietly = TRUE)) install.packages("forecast")
+if (!requireNamespace("ggplot2", quietly = TRUE)) install.packages("ggplot2")
+
+library(forecast)
+library(ggplot2)
+
+set.seed(6)
+
+# Série com tendência + sazonalidade + ruído (para ver efeito de normalização e diferenciação)
+n <- 8 * 12
+t <- 1:n
+x <- 0.05 * t + 1.2 * sin(2*pi*t/12) + rnorm(n, sd=0.8)
+x_ts <- ts(x, frequency = 12)
+
+# Normalização (z-score)
+x_norm <- (x_ts - mean(x_ts)) / sd(x_ts)
+
+# Diferenciação (destaca variações locais)
+dx <- diff(x_ts, lag = 1)
+
+# Subfigura A: original vs normalizada
+dfa <- data.frame(t = 1:length(x_ts),
+                  original = as.numeric(x_ts),
+                  normalizada = as.numeric(x_norm))
+pa <- ggplot(dfa, aes(x=t)) +
+  geom_line(aes(y=original)) +
+  geom_line(aes(y=normalizada)) +
+  ggtitle("série original vs. normalizada (z-score)") +
+  ylab("Valor (nível) / z-score")
+
+# Subfigura B: série diferenciada
+pb <- autoplot(dx) +
+  ggtitle("diferenciação (ΔX_t = X_t - X_{t-1})") +
+  ylab("ΔX_t")
+
+out_a <- har_slide_file("06", "05", "a")
+out_b <- har_slide_file("06", "05", "b")
+out_main <- har_slide_file("06", "05")
+
+har_ggsave_px(out_a, pa, height_px = TSED_HEIGHT)
+har_ggsave_px(out_b, pb, height_px = TSED_HEIGHT)
+
+# Concatenação vertical (a/b -> figura final)
+har_concat_png(out_main, c(out_a, out_b))
+message("PNGs gerados em: ", out_a, " | ", out_b, " | ", out_main)

@@ -1,29 +1,10 @@
----
-title: "Aula 01 - Slide 20: AR(1) e assinatura na ACF"
-output: html_document
----
-
-## Objetivo
-Exibir uma serie AR(1) e a ACF com decaimento aproximado geometrico.
-
-## Descricao
-Este documento explica o passo a passo do codigo para gerar a figura/resultado associado ao slide.
-
-## Conexao com o PDF
-Slide 20, arquivo de saida `figures/01-20.png` (concatena `01-20a.png` e `01-20b.png`).
-
-
-``` r
 # Didatico: roteiro em 3 passos
 # 1) Carregar dependencias/rotinas auxiliares.
 # 2) Preparar dados e parametros do exemplo.
 # 3) Gerar a figura/resultado esperado.
 source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 set.seed(20)
-```
 
-
-``` r
 # Didatico: roteiro em 3 passos
 # 1) Carregar dependencias/rotinas auxiliares.
 # 2) Preparar dados e parametros do exemplo.
@@ -59,14 +40,7 @@ acf(
 )
 grid()
 dev.off()
-```
 
-```
-## png 
-##   2
-```
-
-``` r
 har_concat_png(
   out_file = har_slide_file(1, 20),
   files = c(
@@ -74,7 +48,3 @@ har_concat_png(
     har_slide_file(1, 20, "b")
   )
 )
-```
-
-## Referencia
-Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (3rd ed.). OTexts.

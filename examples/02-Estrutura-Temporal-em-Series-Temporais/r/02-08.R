@@ -1,0 +1,21 @@
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
+set.seed(208)
+
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+n <- 200
+eps <- rnorm(n, mean = 0, sd = 1)
+eps_ts <- ts(eps)
+
+p <- forecast::autoplot(eps_ts) +
+  ggplot2::geom_hline(yintercept = 0, linetype = "dashed") +
+  ggplot2::labs(x = NULL, y = NULL, title = "Ruido: flutuacoes aleatorias")
+
+out <- har_slide_file("02", "08")
+har_ggsave_px(out, p)

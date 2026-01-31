@@ -1,0 +1,39 @@
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+# Aula 07 — Slide 04
+# Embeddings Temporais (espaço de estados) — visualização 2D simples
+# Gera: slides/07-04.png
+
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
+
+set.seed(7)
+
+# Série simulada com dinâmica oscilatória + ruído (didático)
+n <- 400
+t <- 1:n
+x <- sin(2*pi*t/50) + 0.5*sin(2*pi*t/15) + rnorm(n, sd=0.15)
+x_ts <- ts(x)
+
+# Embedding: X_t = (X_t, X_{t-τ}, X_{t-2τ}, ...)
+m <- 2
+tau <- 5
+
+# Construir matriz de embedding 2D
+idx <- (1 + (m-1)*tau):n
+emb <- cbind(x[idx], x[idx - tau])
+colnames(emb) <- c("X_t", "X_{t-τ}")
+
+out_png <- har_slide_file("07", "04")
+
+# Plot base R para evitar dependências extras
+png(filename = out_png, width = TSED_WIDTH, height = TSED_HEIGHT, res = TSED_DPI)
+par(mar=c(4,4,2,1))
+plot(emb[,1], emb[,2], pch=16, cex=0.5,
+     xlab="X_t", ylab=paste0("X_{t-τ} (τ=", tau, ")"),
+     main="Embedding temporal (m=2)")
+lines(emb[,1], emb[,2])
+dev.off()
+
+message("PNG gerado em: ", out_png)

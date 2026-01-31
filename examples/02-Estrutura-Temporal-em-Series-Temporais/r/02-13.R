@@ -1,0 +1,38 @@
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
+set.seed(213)
+
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+n <- 120
+t <- 1:n
+s <- 12
+
+x <- 80 + 5 * sin(2 * pi * t / s) + rnorm(n, 0, 1.2)
+x_ts <- ts(x, frequency = s)
+
+p_a <- forecast::autoplot(x_ts) +
+  ggplot2::labs(x = NULL, y = NULL, title = "Antes: serie com sazonalidade")
+
+fa <- har_slide_file("02", "13", "a")
+har_ggsave_px(fa, p_a, height_px = TSED_HEIGHT / 2)
+
+# STL para estimar o componente sazonal
+st <- stl(x_ts, s.window = "periodic")
+S_hat <- st$time.series[, "seasonal"]
+y_ts <- ts(as.numeric(x_ts) - as.numeric(S_hat), frequency = s)
+
+p_b <- forecast::autoplot(y_ts) +
+  ggplot2::labs(x = NULL, y = NULL, title = "Depois: dessazonalizacao (X_t - S_hat)")
+
+fb <- har_slide_file("02", "13", "b")
+har_ggsave_px(fb, p_b, height_px = TSED_HEIGHT / 2)
+
+# Composicao final do slide
+out <- har_slide_file("02", "13")
+har_concat_png(out, c(fa, fb))

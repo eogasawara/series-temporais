@@ -1,0 +1,66 @@
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
+
+# Aula 08 — Slide 02: Componentes Temporais Instantâneos
+# Objetivo: ilustrar que "evento" pode ser definido como desvio em componentes (valor, tendência instantânea, volatilidade)
+
+suppressPackageStartupMessages({
+  library(ggplot2)
+  library(forecast)
+})
+
+set.seed(42)
+
+# Série sintética: tendência suave + sazonalidade + mudança de volatilidade (para evidenciar v(x_t))
+n <- 240
+t <- 1:n
+trend <- 0.02 * t
+season <- 2 * sin(2*pi*t/24)
+eps1 <- rnorm(n, sd=1)
+eps2 <- rnorm(n, sd=3)
+eps <- ifelse(t <= 140, eps1, eps2)
+x <- trend + season + eps
+x_ts <- ts(x, frequency=24)
+
+# "Componentes instantâneos" (didáticos): tendência via média móvel e volatilidade via desvio-padrão móvel
+w <- 13
+tr <- stats::filter(x, rep(1/w, w), sides=2)
+v  <- sqrt(stats::filter((x - tr)^2, rep(1/w, w), sides=2))
+
+df <- data.frame(
+  t = t,
+  x = as.numeric(x),
+  tr = as.numeric(tr),
+  v = as.numeric(v)
+)
+
+# Figura (a): série com tendência instantânea
+p_a <- ggplot(df, aes(x=t)) +
+  geom_line(aes(y=x)) +
+  geom_line(aes(y=tr), linewidth=0.8) +
+  labs(
+    x = "t",
+    y = "x_t / tr(x_t)",
+    title = "Valor observado e tendência instantânea"
+  )
+
+# Figura (b): volatilidade instantânea (janela móvel)
+p_b <- ggplot(df, aes(x=t, y=v)) +
+  geom_line() +
+  labs(
+    x = "t",
+    y = "v(x_t)",
+    title = "Volatilidade instantânea"
+  )
+
+# Salvar subfiguras e concatenar verticalmente
+file_a <- har_slide_file(08, 02, "a")
+file_b <- har_slide_file(08, 02, "b")
+file_out <- har_slide_file(08, 02)
+
+har_ggsave_px(file_a, p_a, height_px = TSED_HEIGHT)
+har_ggsave_px(file_b, p_b, height_px = TSED_HEIGHT)
+har_concat_png(file_out, c(file_a, file_b))
