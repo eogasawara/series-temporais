@@ -23,7 +23,7 @@ Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (
 # Aula 06 — Slide 08
 # Gerar figuras (PNG) para o slide e criar uma versão .Rmd documentada.
 
-source("slides/utils.R")
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 
 # Pacotes (apenas quando necessário)
 if (!requireNamespace("forecast", quietly = TRUE)) install.packages("forecast")
@@ -69,3 +69,4 @@ har_concat_png(out_main, c(out_a, out_b))
 
 message("PNGs gerados em: ", out_a, " | ", out_b, " | ", out_main)
 ```
+

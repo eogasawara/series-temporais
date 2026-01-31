@@ -24,7 +24,7 @@ Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (
 # Exemplo de SARIMA
 # Este script gera a(s) figura(s) em PNG na pasta slides/ e também cria um .Rmd documentado.
 
-source("slides/utils.R")
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 
 if (!requireNamespace("forecast", quietly = TRUE)) install.packages("forecast")
 if (!requireNamespace("ggplot2", quietly = TRUE)) install.packages("ggplot2")
@@ -53,3 +53,4 @@ out_png <- har_slide_file("05", "08")
 har_ggsave_px(out_png, p)
 message("PNG gerado em: ", out_png)
 ```
+

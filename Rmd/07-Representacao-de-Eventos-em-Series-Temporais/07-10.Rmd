@@ -24,7 +24,7 @@ Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (
 # Evento como Ruptura Estrutural (mudança de regime) — marcação de change point
 # Gera: slides/07-10.png
 
-source("slides/utils.R")
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 
 if (!requireNamespace("forecast", quietly = TRUE)) install.packages("forecast")
 if (!requireNamespace("ggplot2", quietly = TRUE)) install.packages("ggplot2")
@@ -71,3 +71,4 @@ if (!ok) {
 
 message("PNG gerado em: ", out_png)
 ```
+

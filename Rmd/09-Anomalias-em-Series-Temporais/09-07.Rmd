@@ -20,7 +20,7 @@ Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (
 # 1) Carregar dependencias/rotinas auxiliares.
 # 2) Preparar dados e parametros do exemplo.
 # 3) Gerar a figura/resultado esperado.
-source("slides/utils.R")
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 
 # Aula 09 — Slide 07: Anomalias Estatísticas (limiar vs raridade)
 # (a) Resíduos padronizados e limiar |r_t| > λσ_r
@@ -88,3 +88,4 @@ har_ggsave_px(file_b, p_b, height_px = TSED_HEIGHT)
 
 har_concat_png(har_slide_file(9, 7), c(file_a, file_b))
 ```
+

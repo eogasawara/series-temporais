@@ -20,7 +20,7 @@ Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (
 # 1) Carregar dependencias/rotinas auxiliares.
 # 2) Preparar dados e parametros do exemplo.
 # 3) Gerar a figura/resultado esperado.
-source("slides/utils.R")
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 
 # Aula 09 — Slide 05: Outliers clássicos vs anomalias temporais
 # (a) Outlier clássico: z-score global no valor observado
@@ -82,3 +82,4 @@ har_save_plot(
 # Concatenar (a) e (b) verticalmente
 har_concat_png(har_slide_file(9, 5), c(file_a, file_b))
 ```
+

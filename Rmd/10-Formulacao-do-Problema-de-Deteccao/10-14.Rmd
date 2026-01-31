@@ -20,7 +20,7 @@ Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (
 # 1) Carregar dependencias/rotinas auxiliares.
 # 2) Preparar dados e parametros do exemplo.
 # 3) Gerar a figura/resultado esperado.
-source("slides/utils.R")
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 
 # Aula 10 — Slide 14: Papel das Janelas Temporais
 # Objetivo: mostrar que o tamanho da janela w altera a sensibilidade e o conjunto A(w) detectado.
@@ -93,3 +93,4 @@ har_ggsave_px(file_a, p_a, height_px = TSED_HEIGHT)
 har_ggsave_px(file_b, p_b, height_px = TSED_HEIGHT)
 har_concat_png(file_out, c(file_a, file_b))
 ```
+

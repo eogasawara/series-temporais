@@ -20,7 +20,7 @@ Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (
 # 1) Carregar dependencias/rotinas auxiliares.
 # 2) Preparar dados e parametros do exemplo.
 # 3) Gerar a figura/resultado esperado.
-source("slides/utils.R")
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 
 # Aula 09 — Slide 06: Anomalias vs Mudanças Estruturais
 # (a) Anomalia: desvio local (pontual) detectado via Harbinger (hanr_arima)
@@ -81,3 +81,4 @@ har_save_plot(
 
 har_concat_png(har_slide_file(9, 6), c(file_a, file_b))
 ```
+

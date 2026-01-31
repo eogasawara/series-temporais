@@ -20,7 +20,7 @@ Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (
 # 1) Carregar dependencias/rotinas auxiliares.
 # 2) Preparar dados e parametros do exemplo.
 # 3) Gerar a figura/resultado esperado.
-source("slides/utils.R")
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 
 # Aula 08 — Slide 07: Anomalias
 # Objetivo: mostrar anomalias como desvios pontuais detectáveis no espaço residual com limiar estatístico.
@@ -63,3 +63,4 @@ har_save_plot(
   mark.cp  = FALSE
 )
 ```
+

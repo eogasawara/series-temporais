@@ -20,7 +20,7 @@ Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (
 # 1) Carregar dependencias/rotinas auxiliares.
 # 2) Preparar dados e parametros do exemplo.
 # 3) Gerar a figura/resultado esperado.
-source("slides/utils.R")
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 
 set.seed(3)
 n <- 250
@@ -35,3 +35,4 @@ p <- forecast::autoplot(x) +
 f_out <- har_slide_file(3, 5)
 har_ggsave_px(f_out, p, width_px = TSED_WIDTH, height_px = TSED_HEIGHT, dpi = TSED_DPI)
 ```
+

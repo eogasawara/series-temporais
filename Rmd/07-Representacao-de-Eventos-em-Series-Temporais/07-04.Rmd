@@ -24,7 +24,7 @@ Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (
 # Embeddings Temporais (espaço de estados) — visualização 2D simples
 # Gera: slides/07-04.png
 
-source("slides/utils.R")
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 
 set.seed(7)
 
@@ -56,3 +56,4 @@ dev.off()
 
 message("PNG gerado em: ", out_png)
 ```
+

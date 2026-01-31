@@ -24,7 +24,7 @@ Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (
 # Outliers temporais: Aditivo (AO), Inovacional (IO) e Mudança de Nível (LS)
 # Gera: slides/07-13.png
 
-source("slides/utils.R")
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 
 set.seed(7)
 
@@ -66,3 +66,4 @@ dev.off()
 
 message("PNG gerado em: ", out_png)
 ```
+

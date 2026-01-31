@@ -24,7 +24,7 @@ Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (
 # Resíduos Temporais: observação, previsão e resíduo (com evento no resíduo)
 # Gera: slides/07-08.png
 
-source("slides/utils.R")
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 
 if (!requireNamespace("forecast", quietly = TRUE)) install.packages("forecast")
 if (!requireNamespace("ggplot2", quietly = TRUE)) install.packages("ggplot2")
@@ -66,3 +66,4 @@ dev.off()
 
 message("PNG gerado em: ", out_png)
 ```
+

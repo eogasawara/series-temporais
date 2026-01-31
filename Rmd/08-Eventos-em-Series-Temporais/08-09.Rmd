@@ -20,7 +20,7 @@ Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (
 # 1) Carregar dependencias/rotinas auxiliares.
 # 2) Preparar dados e parametros do exemplo.
 # 3) Gerar a figura/resultado esperado.
-source("slides/utils.R")
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 
 # Aula 08 — Slide 09: Motifs
 # Objetivo: mostrar motifs como subsequências recorrentes (padrões similares) em janelas.
@@ -63,3 +63,4 @@ p <- ggplot(df, aes(x=t, y=x)) +
 
 har_ggsave_px(har_slide_file(08, 09), p)
 ```
+

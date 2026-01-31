@@ -20,7 +20,7 @@ Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (
 # 1) Carregar dependencias/rotinas auxiliares.
 # 2) Preparar dados e parametros do exemplo.
 # 3) Gerar a figura/resultado esperado.
-source("slides/utils.R")
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 
 # Aula 10 — Slide 19: Anomalias versus Pontos de Mudança
 # Objetivo: comparar "desvio local" (anomalia) com "mudança persistente" (change point).
@@ -80,3 +80,4 @@ har_save_plot(
 
 har_concat_png(har_slide_file(10, 19), c(file_a, file_b))
 ```
+

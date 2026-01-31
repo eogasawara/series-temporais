@@ -20,7 +20,7 @@ Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (
 # 1) Carregar dependencias/rotinas auxiliares.
 # 2) Preparar dados e parametros do exemplo.
 # 3) Gerar a figura/resultado esperado.
-source("slides/utils.R")
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
 
 # Slide 04-05 — Previsão em AR(1): 1 passo vs h passos
 # (a) Série AR(1) e previsões 1-passo (fitted): \hat X_{t+1|t} = phi X_t
@@ -77,3 +77,4 @@ har_ggsave_px(fb, pb, width_px = TSED_WIDTH, height_px = TSED_HEIGHT, dpi = TSED
 
 har_concat_png(fo, c(fa, fb))
 ```
+
