@@ -1,0 +1,72 @@
+---
+title: "Aula 01 - Slide 12: Serie e ACF amostral"
+output: html_document
+---
+
+## Objetivo
+Empilhar a serie simulada e a ACF para destacar a autocorrelacao amostral.
+
+## Descricao
+Este documento explica o passo a passo do codigo para gerar a figura/resultado associado ao slide.
+
+## Conexao com o PDF
+Slide 12, arquivo de saida `figures/01-12.png` (concatena `01-12a.png` e `01-12b.png`).
+
+```{r setup, message=FALSE, warning=FALSE}
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
+set.seed(12)
+```
+
+```{r gerar-figuras}
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+T <- 200
+t <- 1:T
+phi <- 0.6
+x <- as.numeric(arima.sim(model = list(ar = phi), n = T))
+
+# (a) Serie
+p_series <- forecast::autoplot(ts(x)) +
+  ggplot2::labs(
+    title = bquote("Serie simulada (AR(1), " ~ phi == .(phi) ~ ")"),
+    x = "t",
+    y = expression(X[t])
+  )
+
+har_ggsave_px(
+  file = har_slide_file(1, 12, "a"),
+  plot = p_series,
+  width_px = TSED_WIDTH,
+  height_px = TSED_HEIGHT
+)
+
+# (b) ACF em base R
+file_acf <- har_slide_file(1, 12, "b")
+png(file_acf, width = TSED_WIDTH, height = TSED_HEIGHT, res = 150)
+acf(
+  x,
+  lag.max = 40,
+  main = "ACF amostral (com bandas de confianca)",
+  xlab = "defasagem (h)",
+  ylab = "autocorrelacao"
+)
+grid()
+dev.off()
+
+har_concat_png(
+  out_file = har_slide_file(1, 12),
+  files = c(
+    har_slide_file(1, 12, "a"),
+    har_slide_file(1, 12, "b")
+  )
+)
+```
+
+## Referencia
+Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (3rd ed.). OTexts.

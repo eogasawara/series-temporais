@@ -1,0 +1,49 @@
+---
+title: "Aula 02 - Slide 19: Sintese estrutura + aleatoriedade"
+output: html_document
+---
+
+## Objetivo
+Apresentar uma serie sintetica com estrutura (tendencia e sazonalidade) e aleatoriedade.
+
+## Conexao com o PDF
+Slide 19 do PDF `02-Estrutura-Temporal-em-Series-Temporais.pdf`, arquivo de saida `slides/02-19.png`.
+
+## Descricao do codigo
+Simula tendencia e sazonalidade com ruido AR leve e plota a serie final.
+
+```{r setup, message=FALSE, warning=FALSE}
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+source("https://raw.githubusercontent.com/eogasawara/series-temporais/main/code/utils.R")
+set.seed(219)
+```
+
+```{r gerar-figura}
+# Didatico: roteiro em 3 passos
+# 1) Carregar dependencias/rotinas auxiliares.
+# 2) Preparar dados e parametros do exemplo.
+# 3) Gerar a figura/resultado esperado.
+n <- 180
+t <- 1:n
+s <- 12
+
+# Estrutura: tendencia + sazonalidade + dependencia leve
+Tt <- 40 + 0.10 * t
+St <- 3 * sin(2 * pi * t / s)
+eps <- arima.sim(model = list(ar = 0.4), n = n)
+
+x <- Tt + St + as.numeric(eps)
+x_ts <- ts(x, frequency = s)
+
+p <- forecast::autoplot(x_ts) +
+  ggplot2::labs(x = NULL, y = NULL, title = "Sintese: X_t = estrutura + aleatoriedade")
+
+out <- har_slide_file("02", "19")
+har_ggsave_px(out, p)
+```
+
+## Referencia
+Hyndman, R.J., Athanasopoulos, G. (2021). Forecasting: Principles and Practice (3rd ed.). OTexts.
