@@ -29,12 +29,13 @@ Fundamentar os conhecimentos indispensáveis à análise e modelagem de dados te
 15. [15-Paradigmas-de-Deteccao-Temporal.pdf](15-Paradigmas-de-Deteccao-Temporal.pdf) — paradigmas de detecção temporal.
 16. [16-Classes-de-Metodos-Online.pdf](16-Classes-de-Metodos-Online.pdf) — classes de métodos online para detecção.
 17. [17-Teoria-Geral-de-Eventos-em-Series-Temporais.pdf](17-Teoria-Geral-de-Eventos-em-Series-Temporais.pdf) — teoria geral de eventos em séries temporais.
-18. [18-O-Problema-da-Avaliacao-de-Eventos.pdf](18-O-Problema-da-Avaliacao-de-Eventos.pdf) — avaliação de eventos e critérios de desempenho.
-19. [19-Eventos-como-Pontos-Uma-Simplificacao.pdf](19-Eventos-como-Pontos-Uma-Simplificacao.pdf) — eventos como pontos: simplificação e implicações.
-20. [20-Avaliacao-como-Problema-Cientifico.pdf](20-Avaliacao-como-Problema-Cientifico.pdf) — avaliação como problema científico em detecção temporal.
-21. [21-A-Area-de-Deteccao-de-Eventos.pdf](21-A-Area-de-Deteccao-de-Eventos.pdf) — panorama da área de detecção de eventos.
-22. [22-Deteccao-de-Eventos-como-Problema-Aberto.pdf](22-Deteccao-de-Eventos-como-Problema-Aberto.pdf) — detecção de eventos como problema aberto de pesquisa.
-23. [h1-harbinger.pdf](h1-harbinger.pdf) — Harbinger: framework para detecção de eventos em séries temporais.
+18. [h1-harbinger.pdf](h1-harbinger.pdf) — Harbinger: framework para detecção de eventos em séries temporais.
+19. [t1-tspredit.pdf](t1-tspredit.pdf) — tspredit: modelo preditivo para sinais temporais.
+20. [18-O-Problema-da-Avaliacao-de-Eventos.pdf](18-O-Problema-da-Avaliacao-de-Eventos.pdf) — avaliação de eventos e critérios de desempenho.
+21. [19-Eventos-como-Pontos-Uma-Simplificacao.pdf](19-Eventos-como-Pontos-Uma-Simplificacao.pdf) — eventos como pontos: simplificação e implicações.
+22. [20-Avaliacao-como-Problema-Cientifico.pdf](20-Avaliacao-como-Problema-Cientifico.pdf) — avaliação como problema científico em detecção temporal.
+23. [21-A-Area-de-Deteccao-de-Eventos.pdf](21-A-Area-de-Deteccao-de-Eventos.pdf) — panorama da área de detecção de eventos.
+24. [22-Deteccao-de-Eventos-como-Problema-Aberto.pdf](22-Deteccao-de-Eventos-como-Problema-Aberto.pdf) — detecção de eventos como problema aberto de pesquisa.
 
 ## Playlist
 
