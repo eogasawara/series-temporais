@@ -36,6 +36,7 @@ Fundamentar os conhecimentos indispensáveis à análise e modelagem de dados te
 22. [22-Deteccao-de-Eventos-como-Problema-Aberto.pdf](22-Deteccao-de-Eventos-como-Problema-Aberto.pdf) — detecção de eventos como problema aberto de pesquisa.
 
 h1. [h1-harbinger.pdf](h1-harbinger.pdf) — Harbinger: framework para detecção de eventos em séries temporais.
+
 t1. [t1-tspredit.pdf](t1-tspredit.pdf) — tspredit: modelo preditivo para sinais temporais.
 
 ## Playlist
