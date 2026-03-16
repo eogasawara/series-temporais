@@ -35,9 +35,18 @@ Fundamentar os conhecimentos indispensáveis à análise e modelagem de dados te
 21. [21-A-Area-de-Deteccao-de-Eventos.pdf](21-A-Area-de-Deteccao-de-Eventos.pdf) — panorama da área de detecção de eventos.
 22. [22-Deteccao-de-Eventos-como-Problema-Aberto.pdf](22-Deteccao-de-Eventos-como-Problema-Aberto.pdf) — detecção de eventos como problema aberto de pesquisa.
 
-h1. [h1-harbinger.pdf](h1-harbinger.pdf) — Harbinger: framework para detecção de eventos em séries temporais.
+## Slides práticos
 
-t1. [t1-tspredit.pdf](t1-tspredit.pdf) — tspredit: modelo preditivo para sinais temporais.
+Os materiais práticos abaixo complementam os slides teóricos com fluxos de uso, exemplos guiados e uma visão aplicada de ferramentas para predição e detecção de eventos em séries temporais. Os slides de `tspredit` estão agrupados para facilitar o estudo sequencial, enquanto `harbinger` apresenta a proposta de framework voltada à detecção de eventos.
+
+### tspredit
+
+1. [t01-tspredit.pdf](t01-tspredit.pdf) — visão geral do framework `tspredit` para predição de séries temporais com ajuste integrado.
+2. [t02-tutorial.pdf](t02-tutorial.pdf) — tutoriais práticos do `tspredit`, com casos de uso típicos e comparação de modelos.
+
+### harbinger
+
+1. [h1-harbinger.pdf](h1-harbinger.pdf) — apresentação do framework `harbinger` para detecção de eventos em séries temporais.
 
 ## Playlist
 

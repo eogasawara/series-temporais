@@ -1,0 +1,13 @@
+<h2>Slides práticos</h2>
+<p>Os materiais práticos abaixo complementam os slides teóricos com fluxos de uso, exemplos guiados e uma visão aplicada de ferramentas para predição e detecção de eventos em séries temporais. Os slides de <code>tspredit</code> estão agrupados para facilitar o estudo sequencial, enquanto <code>harbinger</code> apresenta a proposta de framework voltada à detecção de eventos.</p>
+
+<h3>tspredit</h3>
+<ul>
+  <li><a href="t01-tspredit.pdf">t01-tspredit.pdf</a> — visão geral do framework <code>tspredit</code> para predição de séries temporais com ajuste integrado.</li>
+  <li><a href="t02-tutorial.pdf">t02-tutorial.pdf</a> — tutoriais práticos do <code>tspredit</code>, com casos de uso típicos e comparação de modelos.</li>
+</ul>
+
+<h3>harbinger</h3>
+<ul>
+  <li><a href="h1-harbinger.pdf">h1-harbinger.pdf</a> — apresentação do framework <code>harbinger</code> para detecção de eventos em séries temporais.</li>
+</ul>
