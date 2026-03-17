@@ -5,7 +5,13 @@
 <ul>
  	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t01-tspredit.pdf">t01-tspredit.pdf</a> — visão geral do framework <code>tspredit</code> para predição de séries temporais com ajuste integrado.</li>
  	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t02-tutorial.pdf">t02-tutorial.pdf</a> — tutoriais práticos do <code>tspredit</code>, com casos de uso típicos e comparação de modelos.</li>
-        <li><a href="https://github.com/eogasawara/series-temporais/blob/main/t03-data.pdf">t03-data.pdf</a> — utilitários de dados do <code>tspredit</code>, cobrindo representação tabular, projeção supervisionada e divisão temporal para avaliação.</li>
+ 	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t03-data.pdf">t03-data.pdf</a> — utilitários de dados do <code>tspredit</code>, cobrindo representação tabular, projeção supervisionada e divisão temporal para avaliação.</li>
+ 	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t04-datasets.pdf">t04-datasets.pdf</a> — uso de datasets e pipelines de ingestão para séries temporais.</li>
+ 	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t05-filter.pdf">t05-filter.pdf</a> — técnicas de filtragem e seleção de dados temporais.</li>
+ 	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t06-augment.pdf">t06-augment.pdf</a> — métodos de augmentação e engenharia de features para séries temporais.</li>
+ 	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t07-normalization.pdf">t07-normalization.pdf</a> — normalização e pré-processamento escalável.</li>
+ 	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t08-prediction.pdf">t08-prediction.pdf</a> — modelos de previsão e avaliação de performance.</li>
+ 	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t09-custom.pdf">t09-custom.pdf</a> — customização de workflows e componentes do <code>tspredit</code>.</li>
 </ul>
 
 <h3>harbinger</h3>

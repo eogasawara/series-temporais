@@ -44,6 +44,12 @@ Os materiais práticos abaixo complementam os slides teóricos com fluxos de uso
 1. [t01-tspredit.pdf](t01-tspredit.pdf) — visão geral do framework `tspredit` para predição de séries temporais com ajuste integrado.
 2. [t02-tutorial.pdf](t02-tutorial.pdf) — tutoriais práticos do `tspredit`, com casos de uso típicos e comparação de modelos.
 3. [t03-data.pdf](t03-data.pdf) — utilitários de dados do `tspredit`, cobrindo representação tabular, projeção supervisionada e divisão temporal para avaliação.
+4. [t04-datasets.pdf](t04-datasets.pdf) — uso de datasets e pipelines de ingestão para séries temporais.
+5. [t05-filter.pdf](t05-filter.pdf) — técnicas de filtragem e seleção de dados temporais.
+6. [t06-augment.pdf](t06-augment.pdf) — métodos de augmentação e engenharia de features para séries temporais.
+7. [t07-normalization.pdf](t07-normalization.pdf) — normalização e pré-processamento escalável.
+8. [t08-prediction.pdf](t08-prediction.pdf) — modelos de previsão e avaliação de performance.
+9. [t09-custom.pdf](t09-custom.pdf) — customização de workflows e componentes do `tspredit`.
 
 ### harbinger
 
