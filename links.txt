@@ -5,6 +5,7 @@
 <ul>
   <li><a href="t01-tspredit.pdf">t01-tspredit.pdf</a> — visão geral do framework <code>tspredit</code> para predição de séries temporais com ajuste integrado.</li>
   <li><a href="t02-tutorial.pdf">t02-tutorial.pdf</a> — tutoriais práticos do <code>tspredit</code>, com casos de uso típicos e comparação de modelos.</li>
+  <li><a href="t03-data.pdf">t03-data.pdf</a> — utilitários de dados do <code>tspredit</code>, cobrindo representação tabular, projeção supervisionada e divisão temporal para avaliação.</li>
 </ul>
 
 <h3>harbinger</h3>
