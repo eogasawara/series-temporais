@@ -61,7 +61,15 @@ https://cefet-rj-dal.github.io/tspredit
 
 Harbinger é uma estrutura (framework) para detecção de eventos em séries temporais. Ela oferece um ambiente integrado para detecção de anomalias, pontos de mudança e descoberta de padrões recorrentes. Disponibiliza uma ampla variedade de métodos de detecção, além de funções para visualização e avaliação das detecções realizadas.
 
-1. [h1-harbinger.pdf](h1-harbinger.pdf) — apresentação do framework `harbinger` para detecção de eventos em séries temporais.
+1. [h01-harbinger.pdf](h01-harbinger.pdf) — apresentação do framework `harbinger` para detecção de eventos em séries temporais.
+2. [h02-tutorial.pdf](h02-tutorial.pdf) — tutorial prático de uso do `harbinger`, com exemplos guiados de aplicação.
+3. [h03-general.pdf](h03-general.pdf) — visão geral dos componentes e fluxos gerais de trabalho do `harbinger`.
+4. [h04-datasets.pdf](h04-datasets.pdf) — uso de datasets e preparação de dados para tarefas de detecção temporal.
+5. [h05-transformations.pdf](h05-transformations.pdf) — transformações e pré-processamento de séries temporais no `harbinger`.
+6. [h06-anomalies.pdf](h06-anomalies.pdf) — detecção de anomalias com o `harbinger`.
+7. [h07-changepoint.pdf](h07-changepoint.pdf) — detecção de pontos de mudança com o `harbinger`.
+8. [h08-motifs.pdf](h08-motifs.pdf) — descoberta de motifs e padrões recorrentes com o `harbinger`.
+9. [h09-custom.pdf](h09-custom.pdf) — customização de workflows e componentes do `harbinger`.
 
 https://cefet-rj-dal.github.io/harbinger
 

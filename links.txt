@@ -1,7 +1,78 @@
-<h2>Slides práticos</h2>
-<p>Os materiais práticos abaixo complementam os slides teóricos com fluxos de uso, exemplos guiados e uma visão aplicada de ferramentas para predição e detecção de eventos em séries temporais. Os slides de <code>tspredit</code> estão agrupados para facilitar o estudo sequencial, enquanto <code>harbinger</code> apresenta a proposta de framework voltada à detecção de eventos.</p>
+<strong>Ementa</strong>
 
+Análise de Séries Temporais. Conceitos fundamentais e componentes estruturais das séries temporais. Técnicas de pré-processamento e representação de dados temporais. Avaliação em tarefas temporais. Métodos estatísticos e computacionais para análise de séries temporais. Detecção de eventos, incluindo anomalias, pontos de mudança, desvio de conceito e padrões recorrentes. Análise de séries temporais em fluxo e em tempo real. Implementação prática de métodos e avaliação de desempenho em dados reais.
+
+<strong>Objetivos</strong>
+
+Fundamentar os conhecimentos indispensáveis à análise e modelagem de dados temporais, com foco na identificação de padrões, eventos relevantes e comportamentos dinâmicos ao longo do tempo. Para isso, é realizado um estudo sistemático dos conceitos fundamentais de séries temporais, das técnicas de pré-processamento e representação, bem como dos métodos estatísticos e computacionais voltados à detecção de anomalias, pontos de mudança, desvio de conceito e predição. O curso busca proporcionar um sólido embasamento teórico aliado à prática computacional, capacitando o aluno a selecionar, aplicar, avaliar e interpretar métodos de análise de séries temporais em diferentes contextos, incluindo cenários offline e online, e a desenvolver soluções computacionais aplicadas a dados temporais reais.
+
+&nbsp;
+
+<hr />
+
+<strong>Slides</strong>
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/01-Fundamentos-de-Series-Temporais-e-Processos-Estocasticos.pdf">1 - Fundamentos de Séries Temporais e Processos Estocásticos</a> — fundamentos de séries temporais e processos estocásticos aplicados.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/02-Estrutura-Temporal-em-Series-Temporais.pdf">2 - Estrutura Temporal em Séries Temporais</a> — estrutura temporal e componentes de séries temporais.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/03-Modelos-Lineares-em-Series-Temporais.pdf">3 - Modelos Lineares em Séries Temporais</a> — modelos lineares e seus pressupostos em séries temporais.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/04-Previsao-em-Series-Temporais.pdf">4 - Previsão em Séries Temporais</a> — técnicas de previsão e avaliação preditiva.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/05-Por-que-Estender-os-Modelos-Lineares.pdf">5 - Por que Estender os Modelos Lineares</a> — limitações dos modelos lineares e motivações para extensões.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/06-Series-Temporais-como-Objeto-de-Processamento.pdf">6 - Séries Temporais como Objeto de Processamento</a> — séries temporais como objetos de processamento e análise.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/07-Representacao-de-Eventos-em-Series-Temporais.pdf">7 - Representação de Eventos em Séries Temporais</a> — representação de eventos em dados temporais.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/08-Eventos-em-Series-Temporais.pdf">8 - Eventos em Séries Temporais</a> — conceitos e tipos de eventos em séries temporais.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/09-Anomalias-em-Series-Temporais.pdf">9 - Anomalias em Séries Temporais</a> — detecção de anomalias em séries temporais.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/10-Formulacao-do-Problema-de-Deteccao.pdf">10 - Formulação do Problema de Detecção</a> — formulação do problema de detecção de eventos.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/11-Pontos-de-Mudanca-em-Series-Temporais.pdf">11 - Pontos de Mudança em Séries Temporais</a> — pontos de mudança e conceitos relacionados.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/12-Deteccao-de-Pontos-de-Mudanca.pdf">12 - Detecção de Pontos de Mudança</a> — métodos de detecção de pontos de mudança.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/13-Motifs-em-Series-Temporais.pdf">13 - Motifs em Séries Temporais</a> — descoberta de motifs em séries temporais.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/14-Discords-em-Series-Temporais.pdf">14 - Discords em Séries Temporais</a> — identificação de discords e padrões raros.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/15-Paradigmas-de-Deteccao-Temporal.pdf">15 - Paradigmas de Detecção Temporal</a> — paradigmas de detecção temporal.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/16-Classes-de-Metodos-Online.pdf">16 - Classes de Métodos Online</a> — classes de métodos online para detecção.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/17-Teoria-Geral-de-Eventos-em-Series-Temporais.pdf">17 - Teoria Geral de Eventos em Séries Temporais</a> — teoria geral de eventos em séries temporais.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/18-O-Problema-da-Avaliacao-de-Eventos.pdf">18 - O Problema da Avaliação de Eventos</a> — avaliação de eventos e critérios de desempenho.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/19-Eventos-como-Pontos-Uma-Simplificacao.pdf">19 - Eventos como Pontos: uma Simplificação</a> — eventos como pontos: simplificação e implicações.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/20-Avaliacao-como-Problema-Cientifico.pdf">20 - Avaliação como Problema Científico</a> — avaliação como problema científico em detecção temporal.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/21-A-Area-de-Deteccao-de-Eventos.pdf">21 - A Área de Detecção de Eventos</a> — panorama da área de detecção de eventos.
+
+<a href="https://github.com/eogasawara/series-temporais/blob/main/22-Deteccao-de-Eventos-como-Problema-Aberto.pdf">22 - Detecção de Eventos como Problema Aberto</a> — detecção de eventos como problema aberto de pesquisa.
+
+&nbsp;
+
+<hr />
+
+<strong>Playlist</strong>
+
+https://www.youtube.com/playlist?list=PLTy3TWJeueGxOv-GZCkNch7pB1pGkhVb4
+
+&nbsp;
+
+<hr />
+
+<strong>Slides práticos</strong>
+
+Os materiais práticos abaixo complementam os slides teóricos com fluxos de uso, exemplos guiados e uma visão aplicada de ferramentas para predição e detecção de eventos em séries temporais. Os slides de <code>tspredit</code> estão agrupados para facilitar o estudo sequencial, enquanto <code>harbinger</code> apresenta a proposta de framework voltada à detecção de eventos.
 <h3>tspredit</h3>
+<code>tspredit</code> é uma estrutura (framework) para predição de séries temporais. Ela oferece um ambiente integrado para modelagem e predição, disponibilizando uma ampla variedade de métodos, além de funções para visualização e avaliação das predições realizadas.
 <ul>
  	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t01-tspredit.pdf">t01-tspredit.pdf</a> — visão geral do framework <code>tspredit</code> para predição de séries temporais com ajuste integrado.</li>
  	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t02-tutorial.pdf">t02-tutorial.pdf</a> — tutoriais práticos do <code>tspredit</code>, com casos de uso típicos e comparação de modelos.</li>
@@ -13,8 +84,20 @@
  	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t08-prediction.pdf">t08-prediction.pdf</a> — modelos de previsão e avaliação de performance.</li>
  	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t09-custom.pdf">t09-custom.pdf</a> — customização de workflows e componentes do <code>tspredit</code>.</li>
 </ul>
-
+<a href="https://cefet-rj-dal.github.io/tspredit/">https://cefet-rj-dal.github.io/tspredit/</a>
 <h3>harbinger</h3>
+<code>harbinger</code> é uma estrutura (framework) para detecção de eventos em séries temporais. Ela oferece um ambiente integrado para a detecção de anomalias, a identificação de pontos de mudança e a descoberta de padrões recorrentes. Disponibiliza uma ampla variedade de métodos de detecção, além de funções para visualização e avaliação das detecções realizadas.
 <ul>
-  <li><a href="h1-harbinger.pdf">h1-harbinger.pdf</a> — apresentação do framework <code>harbinger</code> para detecção de eventos em séries temporais.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h01-harbinger.pdf">h01-harbinger.pdf</a> — apresentação do framework <code>harbinger</code> para detecção de eventos em séries temporais.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h02-tutorial.pdf">h02-tutorial.pdf</a> — tutorial prático de uso do <code>harbinger</code>, com exemplos guiados de aplicação.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h03-general.pdf">h03-general.pdf</a> — visão geral dos componentes e fluxos gerais de trabalho do <code>harbinger</code>.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h04-datasets.pdf">h04-datasets.pdf</a> — uso de datasets e preparação de dados para tarefas de detecção temporal.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h05-transformations.pdf">h05-transformations.pdf</a> — transformações e pré-processamento de séries temporais no <code>harbinger</code>.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h06-anomalies.pdf">h06-anomalies.pdf</a> — detecção de anomalias com o <code>harbinger</code>.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h07-changepoint.pdf">h07-changepoint.pdf</a> — detecção de pontos de mudança com o <code>harbinger</code>.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h08-motifs.pdf">h08-motifs.pdf</a> — descoberta de motifs e padrões recorrentes com o <code>harbinger</code>.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h09-custom.pdf">h09-custom.pdf</a> — customização de workflows e componentes do <code>harbinger</code>.</li>
 </ul>
+<a href="https://cefet-rj-dal.github.io/harbinger/">https://cefet-rj-dal.github.io/harbinger/</a>
+
+&nbsp;
