@@ -1,0 +1,54 @@
+<strong>Harbinger</strong> é um framework unificado para análise de eventos em séries temporais. O pacote integra, em uma mesma interface, detecção de anomalias, detecção de pontos de mudança, descoberta de motifs e discords, transformações, visualização e avaliação de resultados. Na versão atual do pacote, <strong>1.2.767</strong>, a documentação foi reorganizada para apoiar uma trilha de aprendizado mais guiada e uma navegação temática mais clara.
+
+<h3><strong>Organização didática</strong></h3>
+<p>O material do <code>harbinger</code> passou a ser organizado em duas portas de entrada complementares. A primeira é uma trilha guiada, indicada para quem está conhecendo o framework e quer entender o fluxo completo de análise passo a passo. A segunda é composta por coleções temáticas, indicadas para quem já domina o fluxo básico e deseja estudar uma família específica de métodos.</p>
+
+<p>Essa organização ajuda a evitar o uso do pacote como um catálogo plano de algoritmos. Em vez disso, o estudo começa pela compreensão do fluxo de trabalho, passa pela inspeção dos dados e pela avaliação, e só depois avança para famílias específicas de técnicas e customizações.</p>
+
+<h3><strong>Métodos disponíveis</strong></h3>
+<ul>
+	<li><p><strong>Anomalias:</strong><br />métodos baseados em histogramas, resíduos de modelos estatísticos e espectrais, aprendizado supervisionado, agrupamento, ensembles, autoencoders e análise multivariada.</p></li>
+	<li><p><strong>Pontos de Mudança (<em>Change Points</em>):</strong><br />métodos para uma ou múltiplas mudanças estruturais, testes clássicos, variantes do ChangeFinder, abordagens orientadas a volatilidade e janelas locais.</p></li>
+	<li><p><strong>Motifs e Discords:</strong><br />métodos baseados em <em>Matrix Profile</em> e representações simbólicas, incluindo suporte à descoberta de padrões recorrentes e subsequências raras.</p></li>
+	<li><p><strong>Transformações e Avaliação:</strong><br />suporte a suavização, representações simbólicas e avaliação estrita ou tolerante das detecções realizadas.</p></li>
+</ul>
+
+<h3><strong>Arquitetura</strong></h3>
+<p>A arquitetura do <code>harbinger</code> é baseada no conceito de <em>Experiment Lines</em> e foi construída sobre o DAL Toolbox. Essa organização facilita a comparação entre métodos, a reprodutibilidade dos estudos e a inclusão de novas transformações, detectores, workflows de motifs e avaliadores.</p>
+
+<h3>Instalação</h3>
+A versão estável do <strong>Harbinger</strong> no CRAN está disponível em: <a href="https://CRAN.R-project.org/package=harbinger">https://CRAN.R-project.org/package=harbinger</a>
+
+<p>Para instalar a versão estável do CRAN:</p>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r">install.packages("harbinger")</code></pre>
+</div>
+
+<p>Para instalar a versão em desenvolvimento diretamente do GitHub:</p>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r">library(devtools)
+devtools::install_github("cefet-rj-dal/harbinger", force = TRUE, upgrade = "never")</code></pre>
+</div>
+
+<h3>Documentação e exemplos</h3>
+<p>Os exemplos do <code>harbinger</code> estão organizados em trilha guiada e em coleções temáticas de exemplos gerais, datasets, transformações, anomalias, pontos de mudança, motifs e customização:</p>
+
+<a href="https://github.com/cefet-rj-dal/harbinger/tree/master/examples">https://github.com/cefet-rj-dal/harbinger/tree/master/examples</a>
+
+<h3>Apresentações</h3>
+<p>As apresentações abaixo foram reordenadas para seguir uma progressão de estudo mais didática: começar pela visão geral do framework, avançar pelo fluxo básico de uso, entender os dados e transformações, e só então entrar nas famílias específicas de métodos e na customização.</p>
+<ul>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h01-harbinger.pdf">h01-harbinger.pdf</a> — visão geral do framework <code>harbinger</code> e do problema de detecção de eventos em séries temporais.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h02-tutorial.pdf">h02-tutorial.pdf</a> — trilha guiada de uso do <code>harbinger</code>, ideal como primeiro contato com o fluxo básico.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h03-general.pdf">h03-general.pdf</a> — panorama dos conceitos centrais, utilitários e avaliação no ecossistema do <code>harbinger</code>.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h04-datasets.pdf">h04-datasets.pdf</a> — entendimento das coleções de dados e benchmarks antes da escolha de métodos.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h05-transformations.pdf">h05-transformations.pdf</a> — transformações e pré-processamento para preparar a série antes da análise.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h06-anomalies.pdf">h06-anomalies.pdf</a> — estudo das principais famílias de métodos de detecção de anomalias.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h07-changepoint.pdf">h07-changepoint.pdf</a> — métodos de detecção de pontos de mudança, do caso simples aos cenários mais ricos.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h08-motifs.pdf">h08-motifs.pdf</a> — descoberta de motifs e discords, com foco em análise de subsequências e padrões recorrentes.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/h09-custom.pdf">h09-custom.pdf</a> — extensão e customização do framework com novos componentes e workflows.</li>
+</ul>
+<a href="https://cefet-rj-dal.github.io/harbinger/">https://cefet-rj-dal.github.io/harbinger/</a>
+
+<h3>Vídeos</h3>
+<a href="https://www.youtube.com/playlist?list=PLJb2qK1RWkbELhltwEV0ct3pkssi7k8sj">https://www.youtube.com/playlist?list=PLJb2qK1RWkbELhltwEV0ct3pkssi7k8sj</a>

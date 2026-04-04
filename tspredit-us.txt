@@ -1,0 +1,54 @@
+<strong>TSPredIT</strong> is a unified framework for time-series forecasting with integrated tuning. The package organizes the predictive process as a modular pipeline that may include data representation, temporal splitting, filtering, augmentation, normalization, modeling, model comparison, and integrated hyperparameter tuning. In the current package version, <strong>1.2.767</strong>, the documentation was reorganized to support a guided learning track and clearer thematic collections.
+
+<h3><strong>Didactic organization</strong></h3>
+<p>The <code>tspredit</code> material is now organized around two complementary entry points. The first is a guided track, recommended for readers who want to learn the forecasting workflow step by step. The second is composed of thematic collections, aimed at readers who want to study each stage of the pipeline separately.</p>
+
+<p>This organization reinforces the main idea behind the framework: time-series forecasting does not depend only on model choice, but on an explicit sequence of decisions about series representation, evaluation protocol, filtering, augmentation, normalization, and integrated tuning.</p>
+
+<h3><strong>Available stages and methods</strong></h3>
+<ul>
+	<li><p><strong>Data representation and utilities:</strong><br />construction of temporal objects, supervised projection with sliding windows, and train-test splitting that preserves temporal order.</p></li>
+	<li><p><strong>Datasets:</strong><br />synthetic collections, energy series, macroeconomic indicators, forecasting competition archives, environmental series, and financial series.</p></li>
+	<li><p><strong>Filtering:</strong><br />smoothing methods, robust filters, spectral approaches, decomposition, state-space filters, and seasonal adjustment methods to prepare the series before modeling.</p></li>
+	<li><p><strong>Augmentation:</strong><br />strategies to generate new training windows, from local perturbations to recency-aware methods.</p></li>
+	<li><p><strong>Normalization:</strong><br />global, local, adaptive, and differencing-based strategies to stabilize model inputs.</p></li>
+	<li><p><strong>Prediction:</strong><br />statistical models, machine-learning regressors, feedforward neural networks, sequence-oriented neural models, and integrated hyperparameter tuning.</p></li>
+	<li><p><strong>Customization:</strong><br />support for adding new predictors, filters, augmentation methods, and normalization techniques without breaking the framework contract.</p></li>
+</ul>
+
+<h3><strong>Architecture</strong></h3>
+<p>The <code>tspredit</code> architecture was built on top of DAL Toolbox and emphasizes co-optimization between preprocessing and modeling. Instead of treating the predictor as an isolated step, the framework allows the user to study the joint impact of the choices made throughout the full temporal pipeline.</p>
+
+<h3>Installation</h3>
+The stable version of <strong>TSPredIT</strong> on CRAN is available at: <a href="https://CRAN.R-project.org/package=tspredit">https://CRAN.R-project.org/package=tspredit</a>
+
+<p>To install the stable CRAN version:</p>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r">install.packages("tspredit")</code></pre>
+</div>
+
+<p>To install the development version directly from GitHub:</p>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r">library(devtools)
+devtools::install_github("cefet-rj-dal/tspredit", force = TRUE, upgrade = "never")</code></pre>
+</div>
+
+<h3>Documentation and examples</h3>
+<p>The <code>tspredit</code> examples are organized into a guided track and thematic collections covering time-series data utilities, datasets, filtering, augmentation, normalization, prediction, and customization:</p>
+
+<a href="https://github.com/cefet-rj-dal/tspredit/tree/main/examples">https://github.com/cefet-rj-dal/tspredit/tree/main/examples</a>
+
+<h3>Presentations</h3>
+<p>The presentations below were reordered to follow a more didactic learning progression: start with the overall framework view, move through the guided usage flow, understand the data and available datasets, study preprocessing, and only then enter modeling and customization.</p>
+<ul>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t01-tspredit.pdf">t01-tspredit.pdf</a> — overview of the <code>tspredit</code> framework and the idea of forecasting with integrated tuning.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t02-tutorial.pdf">t02-tutorial.pdf</a> — guided usage track for <code>tspredit</code>, covering forecasting protocols and progressive pipeline construction.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t03-data.pdf">t03-data.pdf</a> — time-series data utilities, including tabular representation, supervised projection, and temporal splitting for evaluation.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t04-datasets.pdf">t04-datasets.pdf</a> — understanding datasets and benchmarks before choosing a forecasting workflow.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t05-filter.pdf">t05-filter.pdf</a> — filtering and series preparation, from the no-filter baseline to more specialized methods.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t06-augment.pdf">t06-augment.pdf</a> — augmentation of training windows to enrich model learning.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t07-normalization.pdf">t07-normalization.pdf</a> — global, local, and adaptive normalization to stabilize predictor inputs.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t08-prediction.pdf">t08-prediction.pdf</a> — study of forecasting model families and integrated hyperparameter tuning.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t09-custom.pdf">t09-custom.pdf</a> — extension and customization of the framework with new pipeline components.</li>
+</ul>
+<a href="https://cefet-rj-dal.github.io/tspredit/">https://cefet-rj-dal.github.io/tspredit/</a>

@@ -1,0 +1,54 @@
+<strong>TSPredIT</strong> é um framework unificado para predição de séries temporais com ajuste integrado. O pacote organiza o processo preditivo como um pipeline modular que pode incluir representação dos dados, divisão temporal, filtragem, augmentação, normalização, modelagem, comparação de modelos e ajuste integrado de hiperparâmetros. Na versão atual do pacote, <strong>1.2.767</strong>, a documentação foi reorganizada para apoiar uma trilha de aprendizado guiada e coleções temáticas mais claras.
+
+<h3><strong>Organização didática</strong></h3>
+<p>O material do <code>tspredit</code> passou a ser organizado em duas portas de entrada complementares. A primeira é uma trilha guiada, indicada para quem deseja aprender o fluxo preditivo passo a passo. A segunda é composta por coleções temáticas, voltadas a quem quer estudar cada estágio do pipeline separadamente.</p>
+
+<p>Essa organização reforça a principal proposta do framework: predição de séries temporais não depende apenas da escolha do modelo, mas de uma sequência explícita de decisões sobre representação da série, protocolo de avaliação, filtragem, augmentação, normalização e ajuste integrado.</p>
+
+<h3><strong>Etapas e métodos disponíveis</strong></h3>
+<ul>
+	<li><p><strong>Representação e utilitários de dados:</strong><br />construção de objetos temporais, projeção supervisionada em janelas deslizantes e divisão treino-teste preservando a ordem temporal.</p></li>
+	<li><p><strong>Datasets:</strong><br />coleções sintéticas, séries energéticas, indicadores macroeconômicos, bases de competições de previsão, séries ambientais e séries financeiras.</p></li>
+	<li><p><strong>Filtragem:</strong><br />métodos de suavização, filtros robustos, abordagens espectrais, decomposição, filtros de estado e ajustes sazonais para preparar a série antes da modelagem.</p></li>
+	<li><p><strong>Augmentação:</strong><br />estratégias para gerar novas janelas de treino, desde perturbações locais até métodos orientados à recência.</p></li>
+	<li><p><strong>Normalização:</strong><br />estratégias globais, locais, adaptativas e baseadas em diferenciação para estabilizar a entrada dos modelos.</p></li>
+	<li><p><strong>Predição:</strong><br />modelos estatísticos, regressão por aprendizado de máquina, redes neurais feedforward, modelos neurais sequenciais e ajuste integrado de hiperparâmetros.</p></li>
+	<li><p><strong>Customização:</strong><br />suporte à inclusão de novos preditores, filtros, métodos de augmentação e técnicas de normalização sem romper o contrato do framework.</p></li>
+</ul>
+
+<h3><strong>Arquitetura</strong></h3>
+<p>A arquitetura do <code>tspredit</code> foi construída sobre o DAL Toolbox e enfatiza a co-otimização entre pré-processamento e modelagem. Em vez de tratar o preditor como uma etapa isolada, o framework permite estudar o impacto conjunto das escolhas feitas ao longo de todo o pipeline temporal.</p>
+
+<h3>Instalação</h3>
+A versão estável do <strong>TSPredIT</strong> no CRAN está disponível em: <a href="https://CRAN.R-project.org/package=tspredit">https://CRAN.R-project.org/package=tspredit</a>
+
+<p>Para instalar a versão estável do CRAN:</p>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r">install.packages("tspredit")</code></pre>
+</div>
+
+<p>Para instalar a versão em desenvolvimento diretamente do GitHub:</p>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r">library(devtools)
+devtools::install_github("cefet-rj-dal/tspredit", force = TRUE, upgrade = "never")</code></pre>
+</div>
+
+<h3>Documentação e exemplos</h3>
+<p>Os exemplos do <code>tspredit</code> estão organizados em trilha guiada e em coleções temáticas de utilitários de dados temporais, datasets, filtragem, augmentação, normalização, predição e customização:</p>
+
+<a href="https://github.com/cefet-rj-dal/tspredit/tree/main/examples">https://github.com/cefet-rj-dal/tspredit/tree/main/examples</a>
+
+<h3>Apresentações</h3>
+<p>As apresentações abaixo foram reordenadas para seguir uma progressão de estudo mais didática: começar pela visão geral do framework, avançar pelo fluxo guiado de uso, entender dados e bases disponíveis, estudar o pré-processamento e só então entrar na modelagem e na customização.</p>
+<ul>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t01-tspredit.pdf">t01-tspredit.pdf</a> — visão geral do framework <code>tspredit</code> e da ideia de predição com ajuste integrado.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t02-tutorial.pdf">t02-tutorial.pdf</a> — trilha guiada de uso do <code>tspredit</code>, cobrindo protocolos de previsão e construção progressiva do pipeline.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t03-data.pdf">t03-data.pdf</a> — utilitários de dados temporais, incluindo representação tabular, projeção supervisionada e divisão temporal para avaliação.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t04-datasets.pdf">t04-datasets.pdf</a> — entendimento das coleções de dados e benchmarks antes da escolha do workflow preditivo.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t05-filter.pdf">t05-filter.pdf</a> — filtragem e preparação da série, do baseline sem filtro a métodos mais especializados.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t06-augment.pdf">t06-augment.pdf</a> — augmentação de janelas de treino para enriquecer o aprendizado do modelo.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t07-normalization.pdf">t07-normalization.pdf</a> — normalização global, local e adaptativa para estabilizar a entrada dos preditores.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t08-prediction.pdf">t08-prediction.pdf</a> — estudo das famílias de modelos preditivos e do ajuste integrado de hiperparâmetros.</li>
+	<li><a href="https://github.com/eogasawara/series-temporais/blob/main/t09-custom.pdf">t09-custom.pdf</a> — extensão e customização do framework com novos componentes do pipeline.</li>
+</ul>
+<a href="https://cefet-rj-dal.github.io/tspredit/">https://cefet-rj-dal.github.io/tspredit/</a>
