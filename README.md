@@ -14,28 +14,28 @@ O curso busca proporcionar um sólido embasamento teórico aliado à prática co
 
 ## Slides
 
-1. [Fundamentos de Séries Temporais e Processos Estocásticos](https://github.com/eogasawara/series-temporais/blob/main/01-Fundamentos-de-Series-Temporais-e-Processos-Estocasticos.pdf) - fundamentos de séries temporais e processos estocásticos aplicados.
-2. [Estrutura Temporal em Séries Temporais](https://github.com/eogasawara/series-temporais/blob/main/02-Estrutura-Temporal-em-Series-Temporais.pdf) - estrutura temporal e componentes de séries temporais.
-3. [Modelos Lineares em Séries Temporais](https://github.com/eogasawara/series-temporais/blob/main/03-Modelos-Lineares-em-Series-Temporais.pdf) - modelos lineares e seus pressupostos em séries temporais.
-4. [Previsão em Séries Temporais](https://github.com/eogasawara/series-temporais/blob/main/04-Previsao-em-Series-Temporais.pdf) - técnicas de previsão e avaliação preditiva.
-5. [Por que Estender os Modelos Lineares](https://github.com/eogasawara/series-temporais/blob/main/05-Por-que-Estender-os-Modelos-Lineares.pdf) - limitações dos modelos lineares e motivações para extensões.
-6. [Séries Temporais como Objeto de Processamento](https://github.com/eogasawara/series-temporais/blob/main/06-Series-Temporais-como-Objeto-de-Processamento.pdf) - séries temporais como objetos de processamento e análise.
-7. [Representação de Eventos em Séries Temporais](https://github.com/eogasawara/series-temporais/blob/main/07-Representacao-de-Eventos-em-Series-Temporais.pdf) - representação de eventos em dados temporais.
-8. [Eventos em Séries Temporais](https://github.com/eogasawara/series-temporais/blob/main/08-Eventos-em-Series-Temporais.pdf) - conceitos e tipos de eventos em séries temporais.
-9. [Anomalias em Séries Temporais](https://github.com/eogasawara/series-temporais/blob/main/09-Anomalias-em-Series-Temporais.pdf) - detecção de anomalias em séries temporais.
-10. [Formulação do Problema de Detecção](https://github.com/eogasawara/series-temporais/blob/main/10-Formulacao-do-Problema-de-Deteccao.pdf) - formulação do problema de detecção de eventos.
-11. [Pontos de Mudança em Séries Temporais](https://github.com/eogasawara/series-temporais/blob/main/11-Pontos-de-Mudanca-em-Series-Temporais.pdf) - pontos de mudança e conceitos relacionados.
-12. [Detecção de Pontos de Mudança](https://github.com/eogasawara/series-temporais/blob/main/12-Deteccao-de-Pontos-de-Mudanca.pdf) - métodos de detecção de pontos de mudança.
-13. [Motifs em Séries Temporais](https://github.com/eogasawara/series-temporais/blob/main/13-Motifs-em-Series-Temporais.pdf) - descoberta de motifs em séries temporais.
-14. [Discords em Séries Temporais](https://github.com/eogasawara/series-temporais/blob/main/14-Discords-em-Series-Temporais.pdf) - identificação de discords e padrões raros.
-15. [Paradigmas de Detecção Temporal](https://github.com/eogasawara/series-temporais/blob/main/15-Paradigmas-de-Deteccao-Temporal.pdf) - paradigmas de detecção temporal.
-16. [Classes de Métodos Online](https://github.com/eogasawara/series-temporais/blob/main/16-Classes-de-Metodos-Online.pdf) - classes de métodos online para detecção.
-17. [Teoria Geral de Eventos em Séries Temporais](https://github.com/eogasawara/series-temporais/blob/main/17-Teoria-Geral-de-Eventos-em-Series-Temporais.pdf) - teoria geral de eventos em séries temporais.
-18. [O Problema da Avaliação de Eventos](https://github.com/eogasawara/series-temporais/blob/main/18-O-Problema-da-Avaliacao-de-Eventos.pdf) - avaliação de eventos e critérios de desempenho.
-19. [Eventos como Pontos: uma Simplificação](https://github.com/eogasawara/series-temporais/blob/main/19-Eventos-como-Pontos-Uma-Simplificacao.pdf) - eventos como pontos: simplificação e implicações.
-20. [Avaliação como Problema Científico](https://github.com/eogasawara/series-temporais/blob/main/20-Avaliacao-como-Problema-Cientifico.pdf) - avaliação como problema científico em detecção temporal.
-21. [A Área de Detecção de Eventos](https://github.com/eogasawara/series-temporais/blob/main/21-A-Area-de-Deteccao-de-Eventos.pdf) - panorama da área de detecção de eventos.
-22. [Detecção de Eventos como Problema Aberto](https://github.com/eogasawara/series-temporais/blob/main/22-Deteccao-de-Eventos-como-Problema-Aberto.pdf) - detecção de eventos como problema aberto de pesquisa.
+1. Fundamentos de Séries Temporais - Conceitos essenciais de séries temporais e processos estocásticos. [PDF](https://github.com/eogasawara/series-temporais/blob/main/01-Fundamentals.pdf)
+2. Estrutura Temporal - Tendência, sazonalidade, ciclos, ruído e dependência temporal. [PDF](https://github.com/eogasawara/series-temporais/blob/main/02-TemporalStructure.pdf)
+3. Modelos Lineares - Modelos AR, MA, ARMA e ARIMA para séries temporais. [PDF](https://github.com/eogasawara/series-temporais/blob/main/03-LinearModels.pdf)
+4. Previsão - Formulação, incerteza, métricas e validação em previsão temporal. [PDF](https://github.com/eogasawara/series-temporais/blob/main/04-Forecasting.pdf)
+5. Extensões de Modelos - Sazonalidade, regressão temporal, volatilidade e não linearidade. [PDF](https://github.com/eogasawara/series-temporais/blob/main/05-ModelExtensions.pdf)
+6. Processamento de Séries Temporais - Transformações, decomposição, janelas e representações. [PDF](https://github.com/eogasawara/series-temporais/blob/main/06-TimeSeriesProcessing.pdf)
+7. Representação de Eventos - Formas de representar eventos em séries temporais. [PDF](https://github.com/eogasawara/series-temporais/blob/main/07-EventRepresentation.pdf)
+8. Eventos Temporais - Conceitos, classes e taxonomia de eventos em séries temporais. [PDF](https://github.com/eogasawara/series-temporais/blob/main/08-TemporalEvents.pdf)
+9. Anomalias - Definições, tipos e critérios de detecção de anomalias temporais. [PDF](https://github.com/eogasawara/series-temporais/blob/main/09-Anomalies.pdf)
+10. Problema de Detecção - Formulação, arquitetura e dimensões da detecção temporal. [PDF](https://github.com/eogasawara/series-temporais/blob/main/10-DetectionProblem.pdf)
+11. Pontos de Mudança - Mudanças estruturais, regimes e persistência temporal. [PDF](https://github.com/eogasawara/series-temporais/blob/main/11-ChangePoints.pdf)
+12. Detecção de Pontos de Mudança - Métodos estatísticos, probabilísticos e computacionais. [PDF](https://github.com/eogasawara/series-temporais/blob/main/12-ChangePointDetection.pdf)
+13. Motifs - Padrões recorrentes e similaridade entre subsequências temporais. [PDF](https://github.com/eogasawara/series-temporais/blob/main/13-Motifs.pdf)
+14. Discords - Padrões raros, isolamento e detecção baseada em distância. [PDF](https://github.com/eogasawara/series-temporais/blob/main/14-Discords.pdf)
+15. Paradigmas de Detecção - Detecção offline, online, latência, janelas e drift. [PDF](https://github.com/eogasawara/series-temporais/blob/main/15-DetectionParadigms.pdf)
+16. Métodos Online - Classes de detectores para cenários de fluxo temporal. [PDF](https://github.com/eogasawara/series-temporais/blob/main/16-OnlineMethods.pdf)
+17. Teoria de Eventos - Estrutura geral para integrar eventos, modelos e detectores. [PDF](https://github.com/eogasawara/series-temporais/blob/main/17-EventTheory.pdf)
+18. Avaliação de Eventos - Correspondência temporal, tolerância e métricas de detecção. [PDF](https://github.com/eogasawara/series-temporais/blob/main/18-EventEvaluation.pdf)
+19. Eventos Pontuais - Simplificação pontual, intervalos e métricas de sobreposição. [PDF](https://github.com/eogasawara/series-temporais/blob/main/19-PointEvents.pdf)
+20. Avaliação Científica - Benchmarks, ground truth e comparabilidade experimental. [PDF](https://github.com/eogasawara/series-temporais/blob/main/20-EvaluationScience.pdf)
+21. Área de Detecção de Eventos - Panorama, subáreas e integração do campo. [PDF](https://github.com/eogasawara/series-temporais/blob/main/21-EventDetectionArea.pdf)
+22. Problemas Abertos - Desafios conceituais, computacionais e científicos da área. [PDF](https://github.com/eogasawara/series-temporais/blob/main/22-OpenProblems.pdf)
 
 ## Playlist
 
