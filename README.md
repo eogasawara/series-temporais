@@ -44,6 +44,12 @@ A playlist do curso reúne as aulas em vídeo correspondentes aos slides teóric
 
 [![Assistir a playlist no YouTube](https://img.shields.io/badge/YouTube-Assistir%20playlist-red?logo=youtube&logoColor=white)](https://www.youtube.com/playlist?list=PLTy3TWJeueGxOv-GZCkNch7pB1pGkhVb4)
 
+## Tutorial SBBD 2026
+
+O tutorial **Detecção de Eventos em Séries Temporais** organiza uma seleção integrada dos materiais do curso e do `harbinger` para uma sessão de até 3h30min, cobrindo fundamentos, taxonomia, estratégias de detecção, ambiente experimental, anomalias, pontos de mudança, motifs, discords, avaliação temporal e agenda de pesquisa.
+
+[Acessar os slides do tutorial](https://github.com/eogasawara/series-temporais/tree/main/tutorial)
+
 ## Slides práticos
 
 Os materiais práticos abaixo conectam a teoria às ferramentas desenvolvidas pelo DAL. Eles devem ser lidos como laboratórios aplicados dos dois eixos do curso:
