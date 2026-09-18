@@ -82,13 +82,22 @@ Página do projeto: <https://cefet-rj-dal.github.io/harbinger/>
 
 1. [h01-harbinger.pdf](https://github.com/eogasawara/series-temporais/blob/main/h01-harbinger.pdf) - apresentação do framework `harbinger` para detecção de eventos em séries temporais.
 2. [h02-tutorial.pdf](https://github.com/eogasawara/series-temporais/blob/main/h02-tutorial.pdf) - tutorial prático de uso do `harbinger`, com exemplos guiados de aplicação.
-3. [h03-general.pdf](https://github.com/eogasawara/series-temporais/blob/main/h03-general.pdf) - visão geral dos componentes e fluxos gerais de trabalho do `harbinger`.
-4. [h04-datasets.pdf](https://github.com/eogasawara/series-temporais/blob/main/h04-datasets.pdf) - uso de datasets e preparação de dados para tarefas de detecção temporal.
-5. [h05-transformations.pdf](https://github.com/eogasawara/series-temporais/blob/main/h05-transformations.pdf) - transformações e pré-processamento de séries temporais no `harbinger`.
-6. [h06-anomalies.pdf](https://github.com/eogasawara/series-temporais/blob/main/h06-anomalies.pdf) - detecção de anomalias com o `harbinger`.
-7. [h07-changepoint.pdf](https://github.com/eogasawara/series-temporais/blob/main/h07-changepoint.pdf) - detecção de pontos de mudança com o `harbinger`.
-8. [h08-motifs.pdf](https://github.com/eogasawara/series-temporais/blob/main/h08-motifs.pdf) - descoberta de motifs e padrões recorrentes com o `harbinger`.
-9. [h09-custom.pdf](https://github.com/eogasawara/series-temporais/blob/main/h09-custom.pdf) - customização de workflows e componentes do `harbinger`.
+3. [h031-general-main.pdf](https://github.com/eogasawara/series-temporais/blob/main/h031-general-main.pdf) - visão geral dos componentes principais e fluxos de trabalho do `harbinger`.
+4. [h032-general-functions.pdf](https://github.com/eogasawara/series-temporais/blob/main/h032-general-functions.pdf) - funções gerais de apoio para visualização, detecção e avaliação no `harbinger`.
+5. [h04-datasets.pdf](https://github.com/eogasawara/series-temporais/blob/main/h04-datasets.pdf) - uso de datasets e preparação de dados para tarefas de detecção temporal.
+6. [h05-transformations.pdf](https://github.com/eogasawara/series-temporais/blob/main/h05-transformations.pdf) - transformações e pré-processamento de séries temporais no `harbinger`.
+7. [h061-anomalies.pdf](https://github.com/eogasawara/series-temporais/blob/main/h061-anomalies.pdf) - introdução à detecção de anomalias com o `harbinger`.
+8. [h062-anomalies-regression.pdf](https://github.com/eogasawara/series-temporais/blob/main/h062-anomalies-regression.pdf) - detecção de anomalias baseada em regressão e resíduos.
+9. [h063-anomalies-classification.pdf](https://github.com/eogasawara/series-temporais/blob/main/h063-anomalies-classification.pdf) - detecção de anomalias baseada em classificação.
+10. [h064-anomalies-deep.pdf](https://github.com/eogasawara/series-temporais/blob/main/h064-anomalies-deep.pdf) - métodos profundos para detecção de anomalias.
+11. [h065-anomalies-autoencoders.pdf](https://github.com/eogasawara/series-temporais/blob/main/h065-anomalies-autoencoders.pdf) - detecção de anomalias com autoencoders.
+12. [h071-changepointclassic.pdf](https://github.com/eogasawara/series-temporais/blob/main/h071-changepointclassic.pdf) - métodos clássicos para detecção de pontos de mudança.
+13. [h072-changepointstatistical.pdf](https://github.com/eogasawara/series-temporais/blob/main/h072-changepointstatistical.pdf) - métodos estatísticos para detecção de pontos de mudança.
+14. [h081-motifs-mp.pdf](https://github.com/eogasawara/series-temporais/blob/main/h081-motifs-mp.pdf) - descoberta de motifs com Matrix Profile.
+15. [h082-discords.pdf](https://github.com/eogasawara/series-temporais/blob/main/h082-discords.pdf) - descoberta de discords e padrões raros em séries temporais.
+16. [h091-custom-detection.pdf](https://github.com/eogasawara/series-temporais/blob/main/h091-custom-detection.pdf) - customização de detectores no `harbinger`.
+17. [h092-custom-cp-motif.pdf](https://github.com/eogasawara/series-temporais/blob/main/h092-custom-cp-motif.pdf) - customização para pontos de mudança e motifs.
+18. [h093-custom-sequence.pdf](https://github.com/eogasawara/series-temporais/blob/main/h093-custom-sequence.pdf) - customização de sequências e workflows de detecção.
 
 ## Repositório
 
