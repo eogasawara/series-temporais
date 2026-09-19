@@ -67,12 +67,11 @@ Página do projeto: <https://cefet-rj-dal.github.io/tspredit/>
 1. [t01-tspredit.pdf](https://github.com/eogasawara/series-temporais/blob/main/t01-tspredit.pdf) - visão geral do framework `tspredit` para predição de séries temporais com ajuste integrado.
 2. [t02-tutorial.pdf](https://github.com/eogasawara/series-temporais/blob/main/t02-tutorial.pdf) - tutoriais práticos do `tspredit`, com casos de uso típicos e comparação de modelos.
 3. [t03-data.pdf](https://github.com/eogasawara/series-temporais/blob/main/t03-data.pdf) - utilitários de dados do `tspredit`, cobrindo representação tabular, projeção supervisionada e divisão temporal para avaliação.
-4. [t04-datasets.pdf](https://github.com/eogasawara/series-temporais/blob/main/t04-datasets.pdf) - uso de datasets e pipelines de ingestão para séries temporais.
-5. [t05-filter.pdf](https://github.com/eogasawara/series-temporais/blob/main/t05-filter.pdf) - técnicas de filtragem e seleção de dados temporais.
-6. [t06-augment.pdf](https://github.com/eogasawara/series-temporais/blob/main/t06-augment.pdf) - métodos de augmentação e engenharia de features para séries temporais.
-7. [t07-normalization.pdf](https://github.com/eogasawara/series-temporais/blob/main/t07-normalization.pdf) - normalização e pré-processamento escalável.
-8. [t08-prediction.pdf](https://github.com/eogasawara/series-temporais/blob/main/t08-prediction.pdf) - modelos de previsão e avaliação de performance.
-9. [t09-custom.pdf](https://github.com/eogasawara/series-temporais/blob/main/t09-custom.pdf) - customização de workflows e componentes do `tspredit`.
+4. [t04-filter.pdf](https://github.com/eogasawara/series-temporais/blob/main/t04-filter.pdf) - técnicas de filtragem e seleção de dados temporais.
+5. [t05-augment.pdf](https://github.com/eogasawara/series-temporais/blob/main/t05-augment.pdf) - métodos de augmentação e engenharia de features para séries temporais.
+6. [t06-normalization.pdf](https://github.com/eogasawara/series-temporais/blob/main/t06-normalization.pdf) - normalização e pré-processamento escalável.
+7. [t07-prediction.pdf](https://github.com/eogasawara/series-temporais/blob/main/t07-prediction.pdf) - modelos de previsão e avaliação de performance.
+8. [t08-custom.pdf](https://github.com/eogasawara/series-temporais/blob/main/t08-custom.pdf) - customização de workflows e componentes do `tspredit`.
 
 ### harbinger
 
@@ -82,22 +81,14 @@ Página do projeto: <https://cefet-rj-dal.github.io/harbinger/>
 
 1. [h01-harbinger.pdf](https://github.com/eogasawara/series-temporais/blob/main/h01-harbinger.pdf) - apresentação do framework `harbinger` para detecção de eventos em séries temporais.
 2. [h02-tutorial.pdf](https://github.com/eogasawara/series-temporais/blob/main/h02-tutorial.pdf) - tutorial prático de uso do `harbinger`, com exemplos guiados de aplicação.
-3. [h031-general-main.pdf](https://github.com/eogasawara/series-temporais/blob/main/h031-general-main.pdf) - visão geral dos componentes principais e fluxos de trabalho do `harbinger`.
-4. [h032-general-functions.pdf](https://github.com/eogasawara/series-temporais/blob/main/h032-general-functions.pdf) - funções gerais de apoio para visualização, detecção e avaliação no `harbinger`.
-5. [h04-datasets.pdf](https://github.com/eogasawara/series-temporais/blob/main/h04-datasets.pdf) - uso de datasets e preparação de dados para tarefas de detecção temporal.
-6. [h05-transformations.pdf](https://github.com/eogasawara/series-temporais/blob/main/h05-transformations.pdf) - transformações e pré-processamento de séries temporais no `harbinger`.
-7. [h061-anomalies.pdf](https://github.com/eogasawara/series-temporais/blob/main/h061-anomalies.pdf) - introdução à detecção de anomalias com o `harbinger`.
-8. [h062-anomalies-regression.pdf](https://github.com/eogasawara/series-temporais/blob/main/h062-anomalies-regression.pdf) - detecção de anomalias baseada em regressão e resíduos.
-9. [h063-anomalies-classification.pdf](https://github.com/eogasawara/series-temporais/blob/main/h063-anomalies-classification.pdf) - detecção de anomalias baseada em classificação.
-10. [h064-anomalies-deep.pdf](https://github.com/eogasawara/series-temporais/blob/main/h064-anomalies-deep.pdf) - métodos profundos para detecção de anomalias.
-11. [h065-anomalies-autoencoders.pdf](https://github.com/eogasawara/series-temporais/blob/main/h065-anomalies-autoencoders.pdf) - detecção de anomalias com autoencoders.
-12. [h071-changepointclassic.pdf](https://github.com/eogasawara/series-temporais/blob/main/h071-changepointclassic.pdf) - métodos clássicos para detecção de pontos de mudança.
-13. [h072-changepointstatistical.pdf](https://github.com/eogasawara/series-temporais/blob/main/h072-changepointstatistical.pdf) - métodos estatísticos para detecção de pontos de mudança.
-14. [h081-motifs-mp.pdf](https://github.com/eogasawara/series-temporais/blob/main/h081-motifs-mp.pdf) - descoberta de motifs com Matrix Profile.
-15. [h082-discords.pdf](https://github.com/eogasawara/series-temporais/blob/main/h082-discords.pdf) - descoberta de discords e padrões raros em séries temporais.
-16. [h091-custom-detection.pdf](https://github.com/eogasawara/series-temporais/blob/main/h091-custom-detection.pdf) - customização de detectores no `harbinger`.
-17. [h092-custom-cp-motif.pdf](https://github.com/eogasawara/series-temporais/blob/main/h092-custom-cp-motif.pdf) - customização para pontos de mudança e motifs.
-18. [h093-custom-sequence.pdf](https://github.com/eogasawara/series-temporais/blob/main/h093-custom-sequence.pdf) - customização de sequências e workflows de detecção.
+3. [h03-harbinger-practical-examples.pdf](https://github.com/eogasawara/series-temporais/blob/main/h03-harbinger-practical-examples.pdf) - exemplos práticos de uso do `harbinger` em fluxos de detecção de eventos.
+4. [h04-thresholding-and-evaluation.pdf](https://github.com/eogasawara/series-temporais/blob/main/h04-thresholding-and-evaluation.pdf) - limiarização, avaliação e análise de resultados em tarefas de detecção temporal.
+5. [h05-datasets.pdf](https://github.com/eogasawara/series-temporais/blob/main/h05-datasets.pdf) - uso de datasets e preparação de dados para tarefas de detecção temporal.
+6. [h06-transformations.pdf](https://github.com/eogasawara/series-temporais/blob/main/h06-transformations.pdf) - transformações e pré-processamento de séries temporais no `harbinger`.
+7. [h07-anomalies.pdf](https://github.com/eogasawara/series-temporais/blob/main/h07-anomalies.pdf) - métodos para detecção de anomalias com o `harbinger`.
+8. [h08-changepoints.pdf](https://github.com/eogasawara/series-temporais/blob/main/h08-changepoints.pdf) - métodos para detecção de pontos de mudança.
+9. [h09-motifs.pdf](https://github.com/eogasawara/series-temporais/blob/main/h09-motifs.pdf) - descoberta de motifs, discords e padrões em séries temporais.
+10. [h10-customization.pdf](https://github.com/eogasawara/series-temporais/blob/main/h10-customization.pdf) - customização de detectores e workflows no `harbinger`.
 
 ## Repositório
 
