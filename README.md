@@ -1,5 +1,9 @@
 # Séries Temporais para Predição e Detecção de Eventos
 
+<p align="right">
+  <strong>🇧🇷 Português</strong> · <a href="readme-eng.md">🇺🇸 English</a>
+</p>
+
 Repositório com materiais didáticos e científicos sobre séries temporais, desenvolvido no contexto das atividades de ensino e extensão do DAL (Data Analytics Lab).
 
 O curso é organizado em torno de duas perguntas centrais:
