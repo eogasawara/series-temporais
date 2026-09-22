@@ -70,14 +70,16 @@ At the moment, the practical `tspredit` and `harbinger` materials are available 
 
 Project page: <https://cefet-rj-dal.github.io/tspredit/>
 
-1. [t01-tspredit.pdf](https://github.com/eogasawara/series-temporais/blob/main/t01-tspredit.pdf) - overview of the `tspredit` framework for time series forecasting with integrated tuning.
-2. [t02-tutorial.pdf](https://github.com/eogasawara/series-temporais/blob/main/t02-tutorial.pdf) - practical `tspredit` tutorials, with typical use cases and model comparison.
-3. [t03-data.pdf](https://github.com/eogasawara/series-temporais/blob/main/t03-data.pdf) - `tspredit` data utilities, covering tabular representation, supervised projection, and temporal splitting for evaluation.
-4. [t04-filter.pdf](https://github.com/eogasawara/series-temporais/blob/main/t04-filter.pdf) - filtering and selection techniques for temporal data.
-5. [t05-augment.pdf](https://github.com/eogasawara/series-temporais/blob/main/t05-augment.pdf) - augmentation and feature engineering methods for time series.
-6. [t06-normalization.pdf](https://github.com/eogasawara/series-temporais/blob/main/t06-normalization.pdf) - scalable normalization and preprocessing.
-7. [t07-prediction.pdf](https://github.com/eogasawara/series-temporais/blob/main/t07-prediction.pdf) - forecasting models and performance evaluation.
-8. [t08-custom.pdf](https://github.com/eogasawara/series-temporais/blob/main/t08-custom.pdf) - customization of `tspredit` workflows and components.
+Full slide decks: [`examples/slides`](https://github.com/cefet-rj-dal/tspredit/tree/main/examples/slides/) · Videos: [tspredit playlist on YouTube](https://youtube.com/playlist?list=PLKGnd3Kb5RZg).
+
+1. overview of the `tspredit` framework for time series forecasting with integrated tuning.
+2. practical `tspredit` tutorials, with typical use cases and model comparison.
+3. `tspredit` data utilities, covering tabular representation, supervised projection, and temporal splitting for evaluation.
+4. filtering and selection techniques for temporal data.
+5. augmentation and feature engineering methods for time series.
+6. scalable normalization and preprocessing.
+7. forecasting models and performance evaluation.
+8. customization of `tspredit` workflows and components.
 
 ### harbinger
 
@@ -85,16 +87,18 @@ Project page: <https://cefet-rj-dal.github.io/tspredit/>
 
 Project page: <https://cefet-rj-dal.github.io/harbinger/>
 
-1. [h01-harbinger.pdf](https://github.com/eogasawara/series-temporais/blob/main/h01-harbinger.pdf) - presentation of the `harbinger` framework for event detection in time series.
-2. [h02-tutorial.pdf](https://github.com/eogasawara/series-temporais/blob/main/h02-tutorial.pdf) - practical tutorial on using `harbinger`, with guided application examples.
-3. [h03-harbinger-practical-examples.pdf](https://github.com/eogasawara/series-temporais/blob/main/h03-harbinger-practical-examples.pdf) - practical examples of using `harbinger` in event detection workflows.
-4. [h04-thresholding-and-evaluation.pdf](https://github.com/eogasawara/series-temporais/blob/main/h04-thresholding-and-evaluation.pdf) - thresholding, evaluation, and result analysis in temporal detection tasks.
-5. [h05-datasets.pdf](https://github.com/eogasawara/series-temporais/blob/main/h05-datasets.pdf) - use of datasets and data preparation for temporal detection tasks.
-6. [h06-transformations.pdf](https://github.com/eogasawara/series-temporais/blob/main/h06-transformations.pdf) - time series transformations and preprocessing in `harbinger`.
-7. [h07-anomalies.pdf](https://github.com/eogasawara/series-temporais/blob/main/h07-anomalies.pdf) - methods for anomaly detection with `harbinger`.
-8. [h08-changepoints.pdf](https://github.com/eogasawara/series-temporais/blob/main/h08-changepoints.pdf) - methods for change point detection.
-9. [h09-motifs.pdf](https://github.com/eogasawara/series-temporais/blob/main/h09-motifs.pdf) - discovery of motifs, discords, and patterns in time series.
-10. [h10-customization.pdf](https://github.com/eogasawara/series-temporais/blob/main/h10-customization.pdf) - customization of detectors and workflows in `harbinger`.
+Full slide decks: [`examples/slides`](https://github.com/cefet-rj-dal/harbinger/tree/main/examples/slides/) · Videos: [harbinger playlist on YouTube](https://youtube.com/playlist?list=PLLXCJ2dysFtw).
+
+1. presentation of the `harbinger` framework for event detection in time series.
+2. practical tutorial on using `harbinger`, with guided application examples.
+3. practical examples of using `harbinger` in event detection workflows.
+4. thresholding, evaluation, and result analysis in temporal detection tasks.
+5. use of datasets and data preparation for temporal detection tasks.
+6. time series transformations and preprocessing in `harbinger`.
+7. methods for anomaly detection with `harbinger`.
+8. methods for change point detection.
+9. discovery of motifs, discords, and patterns in time series.
+10. customization of detectors and workflows in `harbinger`.
 
 ## Repository
 
