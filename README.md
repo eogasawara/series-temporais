@@ -70,14 +70,14 @@ Página do projeto: <https://cefet-rj-dal.github.io/tspredit/>
 
 Slides completos: [`examples/slides`](https://github.com/cefet-rj-dal/tspredit/tree/main/examples/slides/) · Vídeos: [playlist do tspredit no YouTube](https://youtube.com/playlist?list=PLKGnd3Kb5RZg).
 
-1. visão geral do framework `tspredit` para predição de séries temporais com ajuste integrado.
-2. tutoriais práticos do `tspredit`, com casos de uso típicos e comparação de modelos.
-3. utilitários de dados do `tspredit`, cobrindo representação tabular, projeção supervisionada e divisão temporal para avaliação.
-4. técnicas de filtragem e seleção de dados temporais.
-5. métodos de augmentação e engenharia de features para séries temporais.
-6. normalização e pré-processamento escalável.
-7. modelos de previsão e avaliação de performance.
-8. customização de workflows e componentes do `tspredit`.
+1. [Time Series Forecasting in R: Integrated Preprocessing and TSPred IT](https://www.youtube.com/watch?v=MJRo_8ToRKc) - visão geral do framework `tspredit` para predição de séries temporais com ajuste integrado.
+2. [Time Series Forecasting Tutorial in R: ARIMA, MLP, Tuning, and Evaluation](https://www.youtube.com/watch?v=cimfP5cc9II) - tutoriais práticos do `tspredit`, com casos de uso típicos e comparação de modelos.
+3. [Time Series Data Preparation in R: Sliding Windows, Targets, and Test Splits](https://www.youtube.com/watch?v=xKj6UqGV0Uw) - utilitários de dados do `tspredit`, cobrindo representação tabular, projeção supervisionada e divisão temporal para avaliação.
+4. [Time Series Filtering in R: Smoothing, Outliers, Frequency, and Forecasting](https://www.youtube.com/watch?v=Q-w_nj2JyP8) - técnicas de filtragem e seleção de dados temporais.
+5. [Time Series Data Augmentation in R: Jitter, Flip, Stretch, and Recency](https://www.youtube.com/watch?v=nL_Nea-I4PE) - métodos de augmentação e engenharia de features para séries temporais.
+6. [Time Series Normalization in R: Scaling, Adaptive Methods, and Forecasting](https://www.youtube.com/watch?v=cIjon68WyDU) - normalização e pré-processamento escalável.
+7. [Time Series Forecasting Models in R: ARIMA, SVM, Random Forest, MLP, and LSTM](https://www.youtube.com/watch?v=P8YHNUWjirM) - modelos de previsão e avaliação de performance.
+8. [Custom Time Series Forecasting in R: Predictors, Filters, Augmentation, Normalizers](https://www.youtube.com/watch?v=ba4xZv-hCjg) - customização de workflows e componentes do `tspredit`.
 
 ### harbinger
 
@@ -87,16 +87,16 @@ Página do projeto: <https://cefet-rj-dal.github.io/harbinger/>
 
 Slides completos: [`examples/slides`](https://github.com/cefet-rj-dal/harbinger/tree/main/examples/slides/) · Vídeos: [playlist do harbinger no YouTube](https://youtube.com/playlist?list=PLLXCJ2dysFtw).
 
-1. apresentação do framework `harbinger` para detecção de eventos em séries temporais.
-2. tutorial prático de uso do `harbinger`, com exemplos guiados de aplicação.
-3. exemplos práticos de uso do `harbinger` em fluxos de detecção de eventos.
-4. limiarização, avaliação e análise de resultados em tarefas de detecção temporal.
-5. uso de datasets e preparação de dados para tarefas de detecção temporal.
-6. transformações e pré-processamento de séries temporais no `harbinger`.
-7. métodos para detecção de anomalias com o `harbinger`.
-8. métodos para detecção de pontos de mudança.
-9. descoberta de motifs, discords e padrões em séries temporais.
-10. customização de detectores e workflows no `harbinger`.
+1. [Time Series Event Detection in R: Anomalies, Change Points, Motifs](https://www.youtube.com/watch?v=TlaQDoouxGc) - apresentação do framework `harbinger` para detecção de eventos em séries temporais.
+2. [Time Series Event Detection in R: Harbinger Tutorial Workflow](https://www.youtube.com/watch?v=CaKqNghtF8Y) - tutorial prático de uso do `harbinger`, com exemplos guiados de aplicação.
+3. [Time Series Event Detection Examples in R: Anomalies and Motifs](https://www.youtube.com/watch?v=oe9Zq4FULdA) - exemplos práticos de uso do `harbinger` em fluxos de detecção de eventos.
+4. [Time Series Anomaly Thresholding and Evaluation in R](https://www.youtube.com/watch?v=y4s_-NF3y5w) - limiarização, avaliação e análise de resultados em tarefas de detecção temporal.
+5. [Time Series Datasets for Anomaly Detection in R](https://www.youtube.com/watch?v=ISMHl00nWMw) - uso de datasets e preparação de dados para tarefas de detecção temporal.
+6. [Time Series Transformations in R: Moving Averages, SAX, XSAX](https://www.youtube.com/watch?v=11T9HNH7SoU) - transformações e pré-processamento de séries temporais no `harbinger`.
+7. [Time Series Anomaly Detection in R: Harbinger Methods](https://www.youtube.com/watch?v=M_aGal55x4k) - métodos para detecção de anomalias com o `harbinger`.
+8. [Time Series Change Point Detection in R: Harbinger Methods](https://www.youtube.com/watch?v=ogolxAjT_6Y) - métodos para detecção de pontos de mudança.
+9. [Time Series Motif and Discord Discovery in R](https://www.youtube.com/watch?v=bw6GYJe-ELw) - descoberta de motifs, discords e padrões em séries temporais.
+10. [Custom Time Series Event Detection in R with Harbinger](https://www.youtube.com/watch?v=7JStCvxfW5o) - customização de detectores e workflows no `harbinger`.
 
 ## Repositório
 
