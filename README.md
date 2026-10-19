@@ -70,14 +70,14 @@ Página do projeto: <https://cefet-rj-dal.github.io/tspredit/>
 
 Slides completos: [`examples/slides`](https://github.com/cefet-rj-dal/tspredit/tree/main/examples/slides/) · Vídeos: [playlist do tspredit no YouTube](https://youtube.com/playlist?list=PLKGnd3Kb5RZg).
 
-1. [Time Series Forecasting in R: Integrated Preprocessing and TSPred IT](https://www.youtube.com/watch?v=MJRo_8ToRKc) - visão geral do framework `tspredit` para predição de séries temporais com ajuste integrado.
-2. [Time Series Forecasting Tutorial in R: ARIMA, MLP, Tuning, and Evaluation](https://www.youtube.com/watch?v=cimfP5cc9II) - tutoriais práticos do `tspredit`, com casos de uso típicos e comparação de modelos.
-3. [Time Series Data Preparation in R: Sliding Windows, Targets, and Test Splits](https://www.youtube.com/watch?v=xKj6UqGV0Uw) - utilitários de dados do `tspredit`, cobrindo representação tabular, projeção supervisionada e divisão temporal para avaliação.
-4. [Time Series Filtering in R: Smoothing, Outliers, Frequency, and Forecasting](https://www.youtube.com/watch?v=Q-w_nj2JyP8) - técnicas de filtragem e seleção de dados temporais.
-5. [Time Series Data Augmentation in R: Jitter, Flip, Stretch, and Recency](https://www.youtube.com/watch?v=nL_Nea-I4PE) - métodos de augmentação e engenharia de features para séries temporais.
-6. [Time Series Normalization in R: Scaling, Adaptive Methods, and Forecasting](https://www.youtube.com/watch?v=cIjon68WyDU) - normalização e pré-processamento escalável.
-7. [Time Series Forecasting Models in R: ARIMA, SVM, Random Forest, MLP, and LSTM](https://www.youtube.com/watch?v=P8YHNUWjirM) - modelos de previsão e avaliação de performance.
-8. [Custom Time Series Forecasting in R: Predictors, Filters, Augmentation, Normalizers](https://www.youtube.com/watch?v=ba4xZv-hCjg) - customização de workflows e componentes do `tspredit`.
+1. [Time Series Forecasting in R: Integrated Preprocessing and TSPred IT](https://www.youtube.com/watch?v=w9VmgGYNGiM) - visão geral do framework `tspredit` para predição de séries temporais com ajuste integrado.
+2. [Time Series Forecasting Tutorial in R: ARIMA, MLP, Tuning, and Evaluation](https://www.youtube.com/watch?v=2-EimUdnKC4) - tutoriais práticos do `tspredit`, com casos de uso típicos e comparação de modelos.
+3. [Time Series Data Preparation in R: Sliding Windows, Targets, and Test Splits](https://www.youtube.com/watch?v=EIrpW6NulDM) - utilitários de dados do `tspredit`, cobrindo representação tabular, projeção supervisionada e divisão temporal para avaliação.
+4. [Time Series Filtering in R: Smoothing, Outliers, Frequency, and Forecasting](https://www.youtube.com/watch?v=R7mOa29OK2k) - técnicas de filtragem e seleção de dados temporais.
+5. [Time Series Data Augmentation in R: Jitter, Flip, Stretch, and Recency](https://www.youtube.com/watch?v=49xk9cPKiHM) - métodos de augmentação e engenharia de features para séries temporais.
+6. [Time Series Normalization in R: Scaling, Adaptive Methods, and Forecasting](https://www.youtube.com/watch?v=wNsw84etjGM) - normalização e pré-processamento escalável.
+7. [Time Series Forecasting Models in R: ARIMA, SVM, Random Forest, MLP, and LSTM](https://www.youtube.com/watch?v=XUUQIcFRFnc) - modelos de previsão e avaliação de performance.
+8. [Custom Time Series Forecasting in R: Predictors, Filters, Augmentation, Normalizers](https://www.youtube.com/watch?v=xBdk6NQhny8) - customização de workflows e componentes do `tspredit`.
 
 ### harbinger
 
