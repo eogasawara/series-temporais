@@ -45,9 +45,9 @@ The theoretical slides follow three blocks: foundations and representation, fore
 
 The course playlist gathers the video lectures corresponding to the theoretical and practical slides:
 
-[Time Series Analysis](https://www.youtube.com/playlist?list=PLTy3TWJeueGxOv-GZCkNch7pB1pGkhVb4)
+[Time Series Analysis](https://www.youtube.com/playlist?list=PLc1G0WK9I8Cw)
 
-[![Watch the playlist on YouTube](https://img.shields.io/badge/YouTube-Watch%20playlist-red?logo=youtube&logoColor=white)](https://www.youtube.com/playlist?list=PLTy3TWJeueGxOv-GZCkNch7pB1pGkhVb4)
+[![Watch the playlist on YouTube](https://img.shields.io/badge/YouTube-Watch%20playlist-red?logo=youtube&logoColor=white)](https://www.youtube.com/playlist?list=PLc1G0WK9I8Cw)
 
 ## SBBD 2026 Tutorial
 
